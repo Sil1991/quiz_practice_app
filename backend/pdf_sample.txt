@@ -1,0 +1,25 @@
+
+
+AIF-C01
+1.A company makes forecasts each quarter to decide how to optimize operations to
+meet expected demand. The company uses ML models to make these forecasts.
+An Al practitioner is writing a report about the trained ML models to provide 
+transparency and explainability to company stakeholders.What should the Al 
+practitioner include in the report to meet the transparency and explainability 
+requirements? 
+A.Code for model training
+B.Partial dependence plots （PDPs）
+C.Sample data for training
+D.Model convergence tables
+答案:B 
+2.A law firm wants to build an Al application by using large language models
+（LLMs）。 The application will read legal documents and extract key points from
+the documents.
+Which solution meets these requirements? 
+A.Build an automatic named entity recognition system.
+B.Create a recommendation engine.
+C.Develop a summarization chatbot.
+D.Develop a multi-language translation system.
+答案:C 
+3.A company wants to classify human genes into 20 categories based on gene
+ch

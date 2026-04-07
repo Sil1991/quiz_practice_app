@@ -254,6 +254,19 @@ export default {
       if (event.key === ' ' || event.key === 'Enter') {
         if (this.answered && this.currentQuestionIndex < this.selectedQuiz.length) {
           this.onNextClick();
+        } else if (!this.answered && this.currentQuestion.is_multiple) {
+          this.onSubmitClick();
+        }
+      } else if (/^[1-6]$/.test(event.key)) {
+        const keyNum = parseInt(event.key) - 1;
+        if (!this.answered) {
+          if (this.currentQuestion.is_multiple) {
+            // 多选题：切换选择状态
+            this.onCheckboxChange(keyNum);
+          } else {
+            // 单选题：直接选择并提交
+            this.onOptionClick(keyNum);
+          }
         }
       }
     }

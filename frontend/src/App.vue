@@ -257,30 +257,16 @@ export default {
         } else if (!this.answered && this.currentQuestion.is_multiple) {
           this.onSubmitClick();
         }
-      } else if (/^[1-6]$/.test(event.key)) {
-        const keyNum = parseInt(event.key) - 1;
-        if (!this.answered) {
-          if (this.currentQuestion.is_multiple) {
-            // 多选题：切换选择状态
-            this.onCheckboxChange(keyNum);
-          } else {
-            // 单选题：直接选择并提交
-            this.onOptionClick(keyNum);
-          }
-        }
         return;
       }
       
-      if (this.answered) return;
-      
-      const keyMap = { '1': 0, '2': 1, '3': 2, '4': 3 };
-      if (keyMap.hasOwnProperty(event.key)) {
-        const index = keyMap[event.key];
-        if (index < this.currentQuestion.options.length) {
+      if (/^[1-6]$/.test(event.key)) {
+        const keyNum = parseInt(event.key) - 1;
+        if (!this.answered && keyNum < this.currentQuestion.options.length) {
           if (this.currentQuestion.is_multiple) {
-            this.onCheckboxChange(index);
+            this.onCheckboxChange(keyNum);
           } else {
-            this.onOptionClick(index);
+            this.onOptionClick(keyNum);
           }
         }
       }

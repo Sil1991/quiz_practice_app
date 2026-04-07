@@ -144,7 +144,8 @@ export default {
       selectedIndex: -1,
       selectedIndices: [],
       correctLetters: [],
-      answerHistory: []
+      answerHistory: [],
+      apiBaseUrl: ''
     };
   },
   computed: {
@@ -157,8 +158,8 @@ export default {
     }
   },
   created() {
+    this.apiBaseUrl = `http://${window.location.hostname}:3001`;
     this.loadQuestions();
-    // 监听键盘事件
     window.addEventListener('keydown', this.onKeyDown);
   },
   beforeUnmount() {
@@ -181,7 +182,7 @@ export default {
         const urlParams = new URLSearchParams(window.location.search);
         const pick = urlParams.get('pick') || 10;
         
-        const response = await axios.get(`http://localhost:3001/api/questions?pick=${pick}`);
+        const response = await axios.get(`${this.apiBaseUrl}/api/questions?pick=${pick}`);
         console.log('API响应:', response.data);
         this.questions = response.data;
         console.log('问题数量:', this.questions.length);
@@ -243,7 +244,7 @@ export default {
     },
     async checkAnswer(selectedLetters, isMultiple) {
       try {
-        const response = await axios.post('http://localhost:3001/api/check-answer', {
+        const response = await axios.post(`${this.apiBaseUrl}/api/check-answer`, {
           question: this.currentQuestion,
           selected: selectedLetters,
           isMultiple

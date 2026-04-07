@@ -1816,8 +1816,9 @@ app.post('/api/check-answer', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`服务器运行在 http://localhost:${PORT}`);
+  console.log(`局域网访问: http://192.168.3.119:${PORT}`);
 });
 
 // 扩展 String 方法

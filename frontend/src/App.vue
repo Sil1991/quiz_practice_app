@@ -22,6 +22,19 @@
       <div v-else class="quiz">
         <div class="progress">
           <p class="progress-text">第 {{ currentQuestionIndex + 1 }} / {{ selectedQuiz.length }} 题</p>
+          <div class="answer-progress">
+            <div 
+              v-for="(item, index) in selectedQuiz.length" 
+              :key="index"
+              class="progress-dot"
+              :class="{
+                'correct': getAnswerStatus(index) === 'correct',
+                'incorrect': getAnswerStatus(index) === 'incorrect',
+                'current': index === currentQuestionIndex
+              }"
+              :title="index + 1"
+            ></div>
+          </div>
           <p class="question-type" :class="{ multiple: currentQuestion.is_multiple }">
             {{ currentQuestion.is_multiple ? '【多选题】' : '【单选题】' }}
           </p>
@@ -130,7 +143,8 @@ export default {
       feedback: '',
       selectedIndex: -1,
       selectedIndices: [],
-      correctLetters: []
+      correctLetters: [],
+      answerHistory: []
     };
   },
   computed: {
@@ -151,12 +165,23 @@ export default {
     window.removeEventListener('keydown', this.onKeyDown);
   },
   methods: {
+    getAnswerStatus(index) {
+      const record = this.answerHistory.find(r => r.index === index);
+      if (record) {
+        return record.isCorrect ? 'correct' : 'incorrect';
+      }
+      return 'pending';
+    },
     async loadQuestions() {
       this.loading = true;
       this.error = null;
       try {
         console.log('开始加载问题...');
-        const response = await axios.get('http://localhost:3001/api/questions');
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const pick = urlParams.get('pick') || 10;
+        
+        const response = await axios.get(`http://localhost:3001/api/questions?pick=${pick}`);
         console.log('API响应:', response.data);
         this.questions = response.data;
         console.log('问题数量:', this.questions.length);
@@ -173,6 +198,7 @@ export default {
       this.currentQuestionIndex = 0;
       this.score = 0;
       this.showResult = false;
+      this.answerHistory = [];
       this.resetQuestion();
     },
     resetQuestion() {
@@ -233,6 +259,11 @@ export default {
         } else {
           this.feedback = `✗ 回答错误！\n正确答案：${correctLetters.sort().join(', ')}`;
         }
+        
+        this.answerHistory.push({
+          index: this.currentQuestionIndex,
+          isCorrect
+        });
         
         this.answered = true;
       } catch (error) {
@@ -324,6 +355,40 @@ export default {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.answer-progress {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  max-width: 200px;
+  justify-content: flex-end;
+}
+
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.progress-dot:hover {
+  transform: scale(1.2);
+}
+
+.progress-dot.current {
+  background-color: #2196f3;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #2196f3;
+}
+
+.progress-dot.correct {
+  background-color: #4caf50;
+}
+
+.progress-dot.incorrect {
+  background-color: #f44336;
 }
 
 .question-type {

@@ -1782,9 +1782,12 @@ async function loadPDF() {
 app.get('/api/questions', async (req, res) => {
   try {
     console.log('收到请求：/api/questions');
+    const pick = parseInt(req.query.pick) || 10;
+    console.log(`请求题目数量: ${pick}`);
+    
     const questions = await loadPDF();
     console.log(`解析出 ${questions.length} 个问题`);
-    const quiz = generateQuiz(questions);
+    const quiz = generateQuiz(questions, pick);
     console.log(`生成 ${quiz.length} 个测试题`);
     res.json(quiz);
   } catch (error) {

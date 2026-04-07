@@ -268,6 +268,21 @@ export default {
             this.onOptionClick(keyNum);
           }
         }
+        return;
+      }
+      
+      if (this.answered) return;
+      
+      const keyMap = { '1': 0, '2': 1, '3': 2, '4': 3 };
+      if (keyMap.hasOwnProperty(event.key)) {
+        const index = keyMap[event.key];
+        if (index < this.currentQuestion.options.length) {
+          if (this.currentQuestion.is_multiple) {
+            this.onCheckboxChange(index);
+          } else {
+            this.onOptionClick(index);
+          }
+        }
       }
     }
   }

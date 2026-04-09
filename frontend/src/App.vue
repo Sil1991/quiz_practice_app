@@ -181,8 +181,11 @@ export default {
         
         const urlParams = new URLSearchParams(window.location.search);
         const pick = urlParams.get('pick') || 10;
+        const shuffleAnswers = urlParams.get('shuffle') === 'true';
         
-        const response = await axios.get(`${this.apiBaseUrl}/api/questions?pick=${pick}`);
+        console.log(`Shuffle answers: ${shuffleAnswers}`);
+        
+        const response = await axios.get(`${this.apiBaseUrl}/api/questions?pick=${pick}&shuffle=${shuffleAnswers}`);
         console.log('API响应:', response.data);
         this.questions = response.data;
         console.log('问题数量:', this.questions.length);

@@ -124,13 +124,53 @@ function parseCorrectAnswer(answerText) {
 }
 
 // 生成随机测试题
-function generateQuiz(questions, num = 10) {
+function generateQuiz(questions, num = 10, shuffleAnswers = false) {
   if (questions.length < num) {
     num = questions.length;
   }
   
   const shuffled = [...questions].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, num);
+  const quiz = shuffled.slice(0, num);
+  
+  if (shuffleAnswers) {
+    quiz.forEach(question => {
+      if (question.options && Array.isArray(question.options)) {
+        // 提取选项内容（去掉前缀）
+        const contents = question.options.map(option => option.substring(2));
+        // 记录原始正确答案的内容
+        let correctContent = null;
+        if (question.answer) {
+          const correctLetter = question.answer.match(/答案:([A-Z,]+)/);
+          if (correctLetter) {
+            const letters = correctLetter[1].split(',').map(l => l.trim());
+            if (letters.length === 1) {
+              const index = letters[0].charCodeAt(0) - 65;
+              if (index >= 0 && index < contents.length) {
+                correctContent = contents[index];
+              }
+            }
+          }
+        }
+        // 打乱内容
+        contents.sort(() => 0.5 - Math.random());
+        // 重新添加前缀
+        question.options = contents.map((content, index) => {
+          const prefix = String.fromCharCode(65 + index); // A, B, C, D...
+          return `${prefix}.${content}`;
+        });
+        // 更新正确答案
+        if (correctContent) {
+          const newIndex = contents.indexOf(correctContent);
+          if (newIndex !== -1) {
+            const newCorrectLetter = String.fromCharCode(65 + newIndex);
+            question.answer = `答案:${newCorrectLetter}`;
+          }
+        }
+      }
+    });
+  }
+  
+  return quiz;
 }
 
 // 模拟问题数据
@@ -1783,11 +1823,12 @@ app.get('/api/questions', async (req, res) => {
   try {
     console.log('收到请求：/api/questions');
     const pick = parseInt(req.query.pick) || 10;
-    console.log(`请求题目数量: ${pick}`);
+    const shuffle = req.query.shuffle === 'true';
+    console.log(`请求题目数量: ${pick}, 打乱答案: ${shuffle}`);
     
     const questions = await loadPDF();
     console.log(`解析出 ${questions.length} 个问题`);
-    const quiz = generateQuiz(questions, pick);
+    const quiz = generateQuiz(questions, pick, shuffle);
     console.log(`生成 ${quiz.length} 个测试题`);
     res.json(quiz);
   } catch (error) {

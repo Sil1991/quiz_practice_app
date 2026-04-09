@@ -280,9 +280,14 @@ export default {
       }
     },
     restartQuiz() {
-      this.startQuiz();
+      this.loadQuestions();
     },
     onKeyDown(event) {
+      if (event.key === 'r' || event.key === 'R') {
+        this.restartQuiz();
+        return;
+      }
+      
       if (event.key === ' ' || event.key === 'Enter') {
         if (this.answered && this.currentQuestionIndex < this.selectedQuiz.length) {
           this.onNextClick();

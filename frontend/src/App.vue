@@ -145,7 +145,10 @@ export default {
       selectedIndices: [],
       correctLetters: [],
       answerHistory: [],
-      apiBaseUrl: ''
+      apiBaseUrl: '',
+      startIndex: null,
+      endIndex: null,
+      questionCount: 10
     };
   },
   computed: {
@@ -180,12 +183,39 @@ export default {
         console.log('开始加载问题...');
         
         const urlParams = new URLSearchParams(window.location.search);
-        const pick = urlParams.get('pick') || 10;
+        const pick = urlParams.get('pick') || this.questionCount;
         const shuffleAnswers = urlParams.get('shuffle') === 'true';
+        const urlStartIndex = urlParams.get('startIndex');
+        const urlEndIndex = urlParams.get('endIndex');
+        
+        // 优先使用URL参数中的值
+        if (urlStartIndex) {
+          this.startIndex = parseInt(urlStartIndex);
+        }
+        if (urlEndIndex) {
+          this.endIndex = parseInt(urlEndIndex);
+        }
+        if (pick) {
+          this.questionCount = parseInt(pick);
+        }
         
         console.log(`Shuffle answers: ${shuffleAnswers}`);
+        console.log(`URL参数 - startIndex: ${urlStartIndex}, endIndex: ${urlEndIndex}, pick: ${pick}`);
+        console.log(`当前设置 - startIndex: ${this.startIndex}, endIndex: ${this.endIndex}, questionCount: ${this.questionCount}`);
         
-        const response = await axios.get(`${this.apiBaseUrl}/api/questions?pick=${pick}&shuffle=${shuffleAnswers}`);
+        let apiUrl = `${this.apiBaseUrl}/api/questions?pick=${pick}&shuffle=${shuffleAnswers}`;
+        
+        if (this.startIndex !== null && this.startIndex !== undefined && this.startIndex !== '') {
+          apiUrl += `&startIndex=${this.startIndex}`;
+        }
+        
+        if (this.endIndex !== null && this.endIndex !== undefined && this.endIndex !== '') {
+          apiUrl += `&endIndex=${this.endIndex}`;
+        }
+        
+        console.log(`API URL: ${apiUrl}`);
+        
+        const response = await axios.get(apiUrl);
         console.log('API响应:', response.data);
         this.questions = response.data;
         console.log('问题数量:', this.questions.length);
@@ -333,6 +363,11 @@ export default {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin-top: 20px;
+}
+
+.settings-toggle {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .title {

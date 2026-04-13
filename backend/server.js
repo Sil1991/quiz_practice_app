@@ -1831,11 +1831,23 @@ app.get('/api/questions', async (req, res) => {
     console.log('收到请求：/api/questions');
     const pick = parseInt(req.query.pick) || 10;
     const shuffle = req.query.shuffle === 'true';
-    console.log(`请求题目数量: ${pick}, 打乱答案: ${shuffle}`);
+    const startIndex = req.query.startIndex ? parseInt(req.query.startIndex) : null;
+    const endIndex = req.query.endIndex ? parseInt(req.query.endIndex) : null;
+    
+    console.log(`请求题目数量: ${pick}, 打乱答案: ${shuffle}, 起始索引: ${startIndex}, 结束索引: ${endIndex}`);
     
     const questions = await loadPDF();
     console.log(`解析出 ${questions.length} 个问题`);
-    const quiz = generateQuiz(questions, pick, shuffle);
+    
+    let filteredQuestions = questions;
+    if (startIndex !== null || endIndex !== null) {
+      const start = startIndex !== null ? Math.max(0, startIndex - 1) : 0;
+      const end = endIndex !== null ? Math.min(questions.length, endIndex) : questions.length;
+      filteredQuestions = questions.slice(start, end);
+      console.log(`过滤后的题目范围: ${start + 1} - ${end}, 数量: ${filteredQuestions.length}`);
+    }
+    
+    const quiz = generateQuiz(filteredQuestions, pick, shuffle);
     console.log(`生成 ${quiz.length} 个测试题`);
     res.json(quiz);
   } catch (error) {

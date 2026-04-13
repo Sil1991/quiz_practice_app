@@ -84,6 +84,13 @@ function parseQuestions(text) {
       question = questionBuffer.join(' ');
       continue;
     }
+
+    // 选项文本的延续（非空行且不是新的选项或答案）
+    if (options.length > 0 && !answer && line.trim()) {
+      const lastOption = options[options.length - 1];
+      options[options.length - 1] = lastOption + ' ' + line.trim();
+      continue;
+    }
   }
 
   // 保存最后一个问题

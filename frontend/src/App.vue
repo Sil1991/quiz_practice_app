@@ -452,6 +452,10 @@ export default {
   white-space: normal;
   word-wrap: break-word;
   min-height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .option-button:hover {
@@ -482,11 +486,13 @@ export default {
 
 .checkbox-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
-  padding: 10px;
+  padding: 15px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .checkbox-item:hover {
@@ -497,6 +503,8 @@ export default {
   width: 16px;
   height: 16px;
   cursor: pointer;
+  margin-top: 3px;
+  flex-shrink: 0;
 }
 
 .checkbox-item label {
@@ -508,6 +516,8 @@ export default {
   white-space: normal;
   word-wrap: break-word;
   min-height: 40px;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .checkbox-item label.correct {

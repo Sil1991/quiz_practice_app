@@ -1,8 +1,14 @@
 const express = require('express');
-const pdf = require('pdf-parse');
 const fs = require('fs');
 const path = require('path');
+const pdf = require('pdf-parse');
 const cors = require('cors');
+const pdfjsLib = require('pdfjs-dist');
+const pdfjsWorker = require('pdfjs-dist/build/pdf.worker.entry');
+const { parseStringPromise } = require('xml2js');
+
+// 设置PDF.js工作器
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
 const app = express();
 const PORT = 3001;
@@ -178,6 +184,152 @@ function generateQuiz(questions, num = 10, shuffleAnswers = false) {
   }
   
   return quiz;
+}
+
+// 从XML文件中解析问题和答案
+async function parseQuestionsFromXML() {
+  const xmlPath = path.join(__dirname, '..', 'data', 'pdf_parsed.xml');
+  console.log(`XML文件路径: ${xmlPath}`);
+  
+  if (!fs.existsSync(xmlPath)) {
+    console.error('XML文件不存在');
+    return [];
+  }
+  
+  try {
+    // 读取XML文件
+    const xmlContent = fs.readFileSync(xmlPath, 'utf8');
+    
+    // 解析XML
+    const parsedXml = await parseStringPromise(xmlContent);
+    
+    // 提取所有页面内容
+    const pages = parsedXml.pdf.page;
+    let allContent = '';
+    
+    // 合并所有页面的内容
+    for (const page of pages) {
+      if (page.content && page.content[0]) {
+        allContent += page.content[0];
+      }
+    }
+    
+    // 处理文本，添加适当的换行符
+    // 移除XML标签
+    allContent = allContent.replace(/<[^>]+>/g, '');
+    // 清理多余的空白字符
+    allContent = allContent.replace(/\s+/g, ' ').trim();
+    // 在问题编号前添加换行
+    allContent = allContent.replace(/(\d+\.[A-Za-z])/g, '\n$1');
+    // 在选项前添加换行
+    allContent = allContent.replace(/([A-D]\.)/g, '\n$1');
+    // 在答案前添加换行
+    allContent = allContent.replace(/(答案\s*:)/g, '\n答案:');
+    // 清理答案格式（移除空格）
+    allContent = allContent.replace(/答案\s*:/g, '答案:');
+    
+    // 使用现有的parseQuestions函数解析内容
+    const questions = parseQuestions(allContent);
+    console.log(`从XML解析出的问题数量: ${questions.length}`);
+    
+    return questions;
+  } catch (error) {
+    console.error('解析XML文件出错:', error);
+    return [];
+  }
+}
+
+// 解析PDF并生成XML格式，包含高亮信息
+async function parsePDFToXML() {
+  const pdfPath = path.join(__dirname, '..', 'data', 'AIF-C01 Exam Q&A(224)-1.pdf');
+  console.log(`PDF文件路径: ${pdfPath}`);
+  
+  if (!fs.existsSync(pdfPath)) {
+    console.error('PDF文件不存在');
+    return null;
+  }
+  
+  try {
+    // 读取PDF文件
+    const dataBuffer = fs.readFileSync(pdfPath);
+    // 将Buffer转换为Uint8Array
+    const uint8Array = new Uint8Array(dataBuffer);
+    const pdfDocument = await pdfjsLib.getDocument({ data: uint8Array }).promise;
+    
+    let xmlContent = '<?xml version="1.0" encoding="UTF-8"?><pdf>';
+    
+    // 遍历每一页
+    for (let pageNum = 1; pageNum <= pdfDocument.numPages; pageNum++) {
+      const page = await pdfDocument.getPage(pageNum);
+      xmlContent += `<page number="${pageNum}">`;
+      
+      // 提取文本内容
+      const content = await page.getTextContent();
+      let textContent = '';
+      
+      // 提取注释（高亮）
+      const annotations = await page.getAnnotations();
+      const highlights = [];
+      
+      // 收集所有高亮注释
+      for (const annot of annotations) {
+        if (annot.subtype === 'Highlight') {
+          // 提取高亮的文本
+          const rect = annot.rect;
+          const textItems = content.items.filter(item => {
+            const itemRect = item.transform;
+            // 简单的位置判断，实际可能需要更复杂的逻辑
+            return itemRect[4] >= rect[1] && itemRect[4] <= rect[3];
+          });
+          
+          if (textItems.length > 0) {
+            const highlightedText = textItems.map(item => item.str).join(' ');
+            highlights.push({
+              text: highlightedText,
+              color: annot.color ? annot.color : [0.486, 0.784, 0.408] // 默认绿色
+            });
+          }
+        }
+      }
+      
+      // 构建页面文本，标记高亮部分
+      let currentIndex = 0;
+      const pageText = content.items.map(item => item.str).join(' ');
+      
+      // 简单的高亮标记实现
+      // 实际项目中可能需要更精确的文本匹配和位置计算
+      let processedText = pageText;
+      for (const highlight of highlights) {
+        if (highlight.text && highlight.text.trim()) {
+          // 转义正则表达式中的特殊字符
+          const escapedText = highlight.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const regex = new RegExp(escapedText, 'gi');
+          processedText = processedText.replace(regex, `<highlight color="rgb(${Math.round(highlight.color[0] * 255)},${Math.round(highlight.color[1] * 255)},${Math.round(highlight.color[2] * 255)})">${highlight.text}</highlight>`);
+        }
+      }
+      
+      xmlContent += `<content>${processedText}</content>`;
+      xmlContent += `</page>`;
+    }
+    
+    xmlContent += '</pdf>';
+    
+    // 确保data目录存在
+    const dataDir = path.join(__dirname, '..', 'data');
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+    
+    // 保存XML文件
+    const xmlPath = path.join(dataDir, 'pdf_parsed.xml');
+    fs.writeFileSync(xmlPath, xmlContent);
+    console.log(`PDF解析结果已保存到: ${xmlPath}`);
+    
+    return xmlContent;
+  } catch (error) {
+    console.error('解析PDF生成XML时出错:', error);
+    return null;
+  }
 }
 
 // 模拟问题数据
@@ -1789,11 +1941,28 @@ function getMockQuestions() {
 // 读取PDF文件或使用模拟数据
 async function loadPDF() {
   const pdfPath = path.join(__dirname, '..', 'data', 'AIF-C01 Exam Q&A(224)-1.pdf');
+  const xmlPath = path.join(__dirname, '..', 'data', 'pdf_parsed.xml');
   console.log(`PDF文件路径: ${pdfPath}`);
+  console.log(`XML文件路径: ${xmlPath}`);
   console.log(`PDF文件是否存在: ${fs.existsSync(pdfPath)}`);
+  console.log(`XML文件是否存在: ${fs.existsSync(xmlPath)}`);
   
   try {
+    // 优先从XML文件读取
+    if (fs.existsSync(xmlPath)) {
+      console.log('从XML文件读取问题和答案');
+      const questionsFromXML = await parseQuestionsFromXML();
+      if (questionsFromXML.length > 0) {
+        console.log(`从XML解析出 ${questionsFromXML.length} 个问题`);
+        return questionsFromXML;
+      }
+    }
+    
+    // 如果XML文件不存在或解析失败，回退到PDF解析
     if (fs.existsSync(pdfPath)) {
+      // 生成XML格式的PDF解析结果
+      await parsePDFToXML();
+      
       const dataBuffer = fs.readFileSync(pdfPath);
       console.log(`PDF文件大小: ${dataBuffer.length} 字节`);
       const data = await pdf(dataBuffer);

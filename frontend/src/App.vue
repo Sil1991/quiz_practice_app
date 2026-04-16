@@ -42,7 +42,7 @@
         
         <div class="question">
           <h3>问题：</h3>
-          <p>{{ currentQuestion.question }}</p>
+          <p v-html="formatQuestionText(currentQuestion.question)"></p>
         </div>
         
         <div class="options">
@@ -62,7 +62,7 @@
               :disabled="answered"
               @click="onOptionClick(index)"
             >
-              {{ option }}
+              <span v-html="formatQuestionText(option)"></span>
             </button>
           </div>
           
@@ -87,7 +87,7 @@
                   'incorrect': answered && selectedIndices.includes(index) && !correctLetters.includes(option[0])
                 }"
               >
-                {{ option }}
+                <span v-html="formatQuestionText(option)"></span>
               </label>
             </div>
             <button
@@ -185,6 +185,7 @@ export default {
         const urlParams = new URLSearchParams(window.location.search);
         const pick = urlParams.get('pick') || this.questionCount;
         const shuffleAnswers = urlParams.get('shuffle') === 'true';
+        const questionHint = urlParams.get('questionHint') === 'true';
         const urlStartIndex = urlParams.get('startIndex');
         const urlEndIndex = urlParams.get('endIndex');
         
@@ -203,7 +204,7 @@ export default {
         console.log(`URL参数 - startIndex: ${urlStartIndex}, endIndex: ${urlEndIndex}, pick: ${pick}`);
         console.log(`当前设置 - startIndex: ${this.startIndex}, endIndex: ${this.endIndex}, questionCount: ${this.questionCount}`);
         
-        let apiUrl = `${this.apiBaseUrl}/api/questions?pick=${pick}&shuffle=${shuffleAnswers}`;
+        let apiUrl = `${this.apiBaseUrl}/api/questions?pick=${pick}&shuffle=${shuffleAnswers}&questionHint=${questionHint}`;
         
         if (this.startIndex !== null && this.startIndex !== undefined && this.startIndex !== '') {
           apiUrl += `&startIndex=${this.startIndex}`;
@@ -217,6 +218,16 @@ export default {
         
         const response = await axios.get(apiUrl);
         console.log('API响应:', response.data);
+        // 检查第一个问题是否包含highlight标签
+        if (response.data.length > 0) {
+          console.log('第一个问题:', response.data[0].question);
+          console.log('第一个问题是否包含highlight标签:', response.data[0].question.includes('highlight'));
+          // 检查第一个选项是否包含highlight标签
+          if (response.data[0].options.length > 0) {
+            console.log('第一个选项:', response.data[0].options[0]);
+            console.log('第一个选项是否包含highlight标签:', response.data[0].options[0].includes('highlight'));
+          }
+        }
         this.questions = response.data;
         console.log('问题数量:', this.questions.length);
         this.startQuiz();
@@ -311,6 +322,17 @@ export default {
       } else {
         this.resetQuestion();
       }
+    },
+    formatQuestionText(text) {
+      // 处理XML高亮标签，转换为HTML
+      if (text) {
+        console.log('原始文本:', text);
+        // 将highlight标签转换为带有样式的span标签
+        const result = text.replace(/<highlight[^>]*>(.*?)<\/highlight>/g, '<span class="highlight">$1</span>');
+        console.log('处理后文本:', result);
+        return result;
+      }
+      return text;
     },
     restartQuiz() {
       this.loadQuestions();
@@ -685,5 +707,15 @@ export default {
   .option-button, .checkbox-item label {
     font-size: 13px;
   }
+}
+</style>
+
+<style>
+/* 全局样式，用于v-html渲染的内容 */
+.highlight {
+  background-color: #e6f9e6 !important;
+  padding: 2px 4px !important;
+  border-radius: 2px !important;
+  font-weight: bold !important;
 }
 </style>

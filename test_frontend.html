@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>测试高亮功能</title>
+  <style>
+    .highlight {
+      background-color: #e6f9e6;
+      padding: 2px 4px;
+      border-radius: 2px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>测试高亮功能</h1>
+  <div id="test-container"></div>
+  
+  <script>
+    // 模拟formatQuestionText方法
+    function formatQuestionText(text) {
+      // 处理XML高亮标签，转换为HTML
+      if (text) {
+        console.log('原始文本:', text);
+        // 将highlight标签转换为带有样式的span标签
+        const result = text.replace(/<highlight[^>]*>(.*?)<\/highlight>/g, '<span class="highlight">$1</span>');
+        console.log('处理后文本:', result);
+        return result;
+      }
+      return text;
+    }
+    
+    // 测试用例
+    const testQuestion = "25.A company wants to use a large language model   （ <highlight color=\"rgb(124,200,104)\">LLM</highlight> ）   on Amazon Bedrock for sentiment analysis.";
+    const testOption = "B.Provide a detailed explanation of sentiment analysis and how <highlight color=\"rgb(124,200,104)\">LLM</highlight>s work in the prompt.";
+    
+    // 显示测试结果
+    const container = document.getElementById('test-container');
+    container.innerHTML = `
+      <h2>问题：</h2>
+      <p>${formatQuestionText(testQuestion)}</p>
+      <h2>选项：</h2>
+      <p>${formatQuestionText(testOption)}</p>
+    `;
+  </script>
+</body>
+</html>

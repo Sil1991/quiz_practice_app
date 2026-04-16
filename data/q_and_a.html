@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIF-C01 问答测试</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .question {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .question-number {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .question-text {
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+    .options {
+      margin-bottom: 15px;
+    }
+    .option {
+      margin-bottom: 8px;
+      padding-left: 20px;
+    }
+    .answer {
+      font-weight: bold;
+      color: #0066cc;
+    }
+    .highlight {
+      background-color: #e6f9e6;
+      padding: 2px 4px;
+      border-radius: 2px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AIF-C01 问答测试</h1>
+    <div class="question">
+      <div class="question-number">1. A company makes forecasts each quarter to decide how to optimize operations to meet expected demand. The company uses ML models to make these forecasts. An Al practitioner is writing a report about the trained ML models to provide transparency and explainability to company stakeholders.What should the Al practitioner include in the report to meet the transparency and explainability requirements?</div>
+      <div class="options">
+        <div class="option">A.Code</div>
+        <div class="option">B.Partial dependence plots （ PDPs ）</div>
+        <div class="option">C.Sample data for training</div>
+        <div class="option">D.Model convergence tables</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">2. A law firm wants to build an Al application by using large language models （ LLMs ）。 The application will read legal documents and extract key points from the documents. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Build an</div>
+        <div class="option">B.Create a recommendation engine.</div>
+        <div class="option">C.Develop a</div>
+        <div class="option">D.Develop a multi - language translation system.</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">3. A company wants to classify human genes into 20 categories based on gene characteristics. The company needs an ML algorithm to document how the inner mechanism of the model affects the output. Which ML algorithm meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Decision trees</div>
+        <div class="option">B.Linear regression</div>
+        <div class="option">C.Logistic regression</div>
+        <div class="option">D.Neural networks</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">4. A company has built an image classification model to predict plant diseases from photos of plant leaves. The company wants to evaluate how many images the model classified correctly. Which evaluation metric should the company use to measure the model's <highlight color="rgb(124,200,104)">performance?</highlight></div>
+      <div class="options">
+        <div class="option">A.R - squared score</div>
+        <div class="option">B.Accuracy</div>
+        <div class="option">C.Root mean squared error （ RMSE ）</div>
+        <div class="option">D.Learning rate</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">5. A company is using a pre - trained large language model （ LLM ） to build a chatbot for product recommendations. The company needs the LLM outputs to be short and written in a specific language. Which solution will align the LLM response quality with the company's expectations?</div>
+      <div class="options">
+        <div class="option">A.Adjust</div>
+        <div class="option">B.Choose an LLM of a different size.</div>
+        <div class="option">C.Increase the temperature.</div>
+        <div class="option">D.Increase</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">6. A company uses Amazon SageMaker for its ML pipeline in a production environment. The company has large input data sizes up to 1 GB and processing times up to 1 hour. The company needs near real - time latency. Which SageMaker inference option meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Real - time inference</div>
+        <div class="option">B.Serverless</div>
+        <div class="option">C.Asynchronous inference</div>
+        <div class="option">D.Batch transform</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">7. A company is using domain - specific models. The company wants to avoid creating new models from the beginning. The company instead wants to adapt pre - trained models to create models for new, related tasks. Which ML strategy meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Increase the number of epochs.</div>
+        <div class="option">B.Use transfer learning.</div>
+        <div class="option">C.Decrease the number of</div>
+        <div class="option">D.Use unsupervised learning ，</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">8. A company is building a solution to generate images for protective eyewear. The solution must have high accuracy and must minimize the risk of incorrect annotations. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Human - in - the - loop validation by using Amazon SageMaker Ground Truth Plus</div>
+        <div class="option">B.Data</div>
+        <div class="option">C.Image recognition by using</div>
+        <div class="option">D.Data summarization by using Amazon QuickSight Q</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">9. A company wants to create a chatbot by using a foundation model （ FM ） on Amazon Bedrock. The FM needs to access encrypted data that is stored in an Amazon S3 bucket. The data is encrypted with Amazon S3 managed keys （ SSE - S3 ）。 The FM encounters a failure when attempting to access the S3 bucket data. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Ensure that the role that Amazon Bedrock assumes has permission to decrypt data with</div>
+        <div class="option">B.Set the access permissions for the S3 buckets to allow</div>
+        <div class="option">C.Use prompt engineering techniques to</div>
+        <div class="option">D.Ensure that the S3 data does not</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">10. A company wants to use language models to create an application for <highlight color="rgb(124,200,104)">inference</highlight> on edge devices. The <highlight color="rgb(124,200,104)">inference</highlight> must have the lowest latency possible. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Deploy optimized small language models （ SLMs ）</div>
+        <div class="option">B.Deploy optimized large language models （ LLMs ） on edge devices.</div>
+        <div class="option">C.Incorporate a centralized small language model （ SLM ） API for asynchronous</div>
+        <div class="option">D.Incorporate a centralized large language model （ LLM</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">11. A company wants to build an ML model by using Amazon SageMaker. The company needs to share and manage variables for model development across multiple teams. Which SageMaker feature meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon SageMaker Feature Store</div>
+        <div class="option">B.Amazon SageMaker Data Wrangler</div>
+        <div class="option">C.Amazon SageMaker Clarify</div>
+        <div class="option">D.Amazon SageMaker Model Cards</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">12. A company wants to use generative Al to increase developer productivity and software development. The company wants to use Amazon Q Developer. What can Amazon Q Developer do to help the company meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Create software snippets, reference tracking, and</div>
+        <div class="option">B.Run an application without provisioning or managing</div>
+        <div class="option">C.Enable voice commands for coding and providing natural language search.</div>
+        <div class="option">D.Convert audio files to text documents by using ML models.</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">13. A financial institution is using Amazon Bedrock to develop an Al application. The application is hosted in a VP</div>
+      <div class="options">
+        <div class="option">C. To meet regulatory compliance standards, the VPC is not allowed access</div>
+        <div class="option">A.AWS PrivateLink</div>
+        <div class="option">B.Amazon Macie</div>
+        <div class="option">C.Amazon CloudFront</div>
+        <div class="option">D.Internet gateway</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">14. A company wants to develop an educational game where users answer questions such as the following:"A jar contains six red, four green, and three yellow marbles. What is the probability of choosing a green marble from the jar?" Which solution meets these requirements with the LEAST operational overhead?</div>
+      <div class="options">
+        <div class="option">A.Use supervised learning to create a</div>
+        <div class="option">B.Use reinforcement learning to train a</div>
+        <div class="option">C.Use code that will calculate probability by using</div>
+        <div class="option">D.Use unsupervised learning to create a model that will</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">15. Which metric measures the runtime efficiency of operating Al models?</div>
+      <div class="options">
+        <div class="option">A.Customer satisfaction score （ CSAT ）</div>
+        <div class="option">B.Training time for each</div>
+        <div class="option">C.Average response time</div>
+        <div class="option">D.Number of training instances</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">16. A company is building a contact center application and wants to gain insights from customer conversations. The company wants to analyze and extract key information from the audio of the customer calls. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Build a conversational</div>
+        <div class="option">B.Transcribe call recordings by using Amazon Transcribe.</div>
+        <div class="option">C.Extract information from call recordings by using Amazon SageMaker Model Monitor.</div>
+        <div class="option">D.Create classification labels by using Amazon Comprehend.</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">17. A company has petabytes of unlabeled customer data to use for an advertisement campaign. The company wants to <highlight color="rgb(124,200,104)">classify</highlight> its customers into tiers to advertise and promote the company's products. Which methodology should the company use to meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Supervised learning</div>
+        <div class="option">B.Unsupervised</div>
+        <div class="option">C.Reinforcement learning</div>
+        <div class="option">D.Reinforcement learning from human feedback （ RLHF ）</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">18. An AIpractitioner wants to use a foundation model （ FM ） to design a search application. The search application must handle queries that have text and images. Which type of FM should the AIpractitioner use to power the search application?</div>
+      <div class="options">
+        <div class="option">A.Multi -</div>
+        <div class="option">B.Text embedding model</div>
+        <div class="option">C.Multi - modal generation model</div>
+        <div class="option">D.Image</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">19. A company uses a foundation model （ FM ） from Amazon Bedrock for an Al search tool. The company wants to fine - tune the model to be more accurate by using the company's data. Which strategy will successfully fine - tune the model?</div>
+      <div class="options">
+        <div class="option">A.Provide labeled data with the prompt field and the completion field.</div>
+        <div class="option">B.Prepare the</div>
+        <div class="option">C.Purchase Provisioned Throughput for Amazon Bedrock.</div>
+        <div class="option">D.Train the model on journals and</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">20. A company wants to use Al to protect its application from threats. The Al solution needs to check if an IP address is from a suspicious source.Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Build a speech recognition system.</div>
+        <div class="option">B.Create a</div>
+        <div class="option">C.Develop an anomaly detection system.</highlight></div>
+        <div class="option">D.Create a fraud forecasting</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">21. Which feature of Amazon OpenSearch Service gives companies the ability to build <highlight color="rgb(124,200,104)">vector database applications</highlight>?</div>
+      <div class="options">
+        <div class="option">A.Integration with Amazon S3</div>
+        <div class="option">B.Support for geospatial indexing and queries</div>
+        <div class="option">C.Scalable index</div>
+        <div class="option">D.Ability to perform real - time</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">22. Which option is a use case for generative Al models?</div>
+      <div class="options">
+        <div class="option">A.Improving network security by using intrusion detection systems</div>
+        <div class="option">B.Creating</div>
+        <div class="option">C.Enhancing database</div>
+        <div class="option">D.Analyzing financial data to forecast stock</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">23. A company wants to build a generative Al application by using Amazon Bedrock and needs to choose a foundation model （ FM ）。 The company wants to know how much information can fit into one prompt Which consideration will inform the company's decision?</div>
+      <div class="options">
+        <div class="option">A.Temperature</div>
+        <div class="option">B.Context window</div>
+        <div class="option">C.Batch size</div>
+        <div class="option">D.Model size</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">24. A company wants to make a chatbot to help customers. The chatbot will help solve technical problems without hurnan intervention.The company chose a foundation model （ FM ） for the chatbot. The chatbot needs to produce responses that adhere to company tone.Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Set a low limit on the number of tokens the FM can</div>
+        <div class="option">B.Use batch inferencing to process detailed responses.</div>
+        <div class="option">C.<highlight</div>
+        <div class="option">D.Define a higher number for the temperature</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">25. A company wants to use a large language model （ LLM ） on Amazon Bedrock for <highlight color="rgb(124,200,104)">sentiment</highlight> analysis. The company wants to <highlight color="rgb(124,200,104)">classify</highlight> the <highlight color="rgb(124,200,104)">sentiment</highlight> of text passages as positive or negative. Which prompt engineering strategy meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Provide examples of text</div>
+        <div class="option">B.Provide a detailed explanation of <highlight</div>
+        <div class="option">C.Provide the new text passage to be classified without any additional context or</div>
+        <div class="option">D.Provide the new text passage with a few examples of unrelated tasks, such as</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">26. A security company is using Amazon Bedrock to run foundation models （ FMs ）。 The company wants to ensure that only authorized users invoke the models. The company needs to identify any unauthorized access attempts to set appropriate AWS Identity and Access Management （ IAM ） policies and roles for future iterations of the FMs. Which AWS service should the company use to identify unauthorized users that are trying to access Amazon Bedrock?</div>
+      <div class="options">
+        <div class="option">A.AWS Audit</div>
+        <div class="option">B.AWS CloudTrail</div>
+        <div class="option">C.Amazon Fraud Detector</div>
+        <div class="option">D.AWS Trusted Advisor</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">27. A company has developed an ML model for image classification. The company wants to deploy the model to production so that a web application can use the model. The company needs to implement a solution to host the model and serve predictions without managing any of the underlying infrastructure.Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Use Amazon</div>
+        <div class="option">B.Use Amazon CloudFront to deploy the model.</div>
+        <div class="option">C.Use Amazon API Gateway to host the</div>
+        <div class="option">D.Use AWS Batch to host the model and serve predictions.</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">28. An AI company periodically evaluates its systems and processes with the help of independent software vendors （ ISVs ）。 The company needs to receive email message <highlight color="rgb(124,200,104)">notifications</highlight> when an ISV's compliance reports become available. Which AWS service can the company use to meet this requirement?</div>
+      <div class="options">
+        <div class="option">A.AWS Audit</div>
+        <div class="option">B.AWS Artifact</div>
+        <div class="option">C.AWS Trusted Advisor</div>
+        <div class="option">D.AWS Data Exchange</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">29. A company wants to use a large language model （ LLM ） to develop a conversational agent. The company needs to prevent the LLM from being manipulated with common prompt engineering techniques to perform undesirable actions or expose sensitive information. Which action will reduce these risks?</div>
+      <div class="options">
+        <div class="option">A.Create a prompt template that teaches the LLM to detect</div>
+        <div class="option">B.Increase the temperature parameter on invocation requests to the LLM.</div>
+        <div class="option">C.Avoid using LLMs that are not listed in Amazon SageMaker.</div>
+        <div class="option">D.Decrease the number of</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">30. A company is using the Generative Al Security Scoping Matrix to assess security responsibilities for its solutions. The company has identified four different solution scopes based on the matrix. Which solution scope gives the company the MOST ownership of security responsibilities?</div>
+      <div class="options">
+        <div class="option">A.Using a third - party enterprise application that has embedded generative Al features.</div>
+        <div class="option">B.Building an application by using an existing third - party generative Al foundation</div>
+        <div class="option">C.Refining an existing third - party generative Al foundation model （ FM ）</div>
+        <div class="option">D.Building and training a generative AI model from scratch by using specific data</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">31. An AI practitioner has a database of animal photos. The Al practitioner wants to automatically identify and categorize the animals in the photos without manual human effort. Which strategy meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Object detection</div>
+        <div class="option">B.Anomaly detection</div>
+        <div class="option">C.Named entity recognition</div>
+        <div class="option">D.Inpainting</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">32. A company wants to create an application by using Amazon Bedrock. The company has a limited budget and prefers flexibility without long - term commitment. Which Amazon Bedrock pricing model meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.On - Demand</div>
+        <div class="option">B.Model customization</div>
+        <div class="option">C.Provisioned Throughpul</div>
+        <div class="option">D.Spot Instance</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">33. Which AWS service or feature can help an Al development team quickly deploy and consume a foundation model （ FM ） within the team's VPC?</div>
+      <div class="options">
+        <div class="option">A.Amazon</div>
+        <div class="option">B.Amazon SageMaker JumpStart</div>
+        <div class="option">C.PartyRock, an Amazon Bedrock Playground</div>
+        <div class="option">D.Amazon SageMaker endpoints</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">34. How can companies use large language models （ LLMs ） securely on Amazon Bedrock?</div>
+      <div class="options">
+        <div class="option">A.Design clear and specific prompts. Configure AWS</div>
+        <div class="option">B.Enable AWS Audit Manager for automatic model evaluation jobs.</div>
+        <div class="option">C.Enable Amazon Bedrock automatic model evaluation jobs.</div>
+        <div class="option">D.Use Amazon CloudWatch</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">35. A company has terabytes of data in a database that the company can use for business analysis. The company wants to build an Al - based application that can <highlight color="rgb(124,200,104)">build a SQL query from input text that employees provide. The employees have</highlight> minimal experience with technology.Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Generative pre - trained transformers （ GPT ）</div>
+        <div class="option">B.Residual neural network</div>
+        <div class="option">C.Support vector machine</div>
+        <div class="option">D.WaveNet</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">36. A company built a deep learning model for object detection and deployed the model to production.Which Al process occurs when the model analyzes a new image to identify objects?</div>
+      <div class="options">
+        <div class="option">A.Training</div>
+        <div class="option">B.Inference</div>
+        <div class="option">C.Model deployment</div>
+        <div class="option">D.Bias correction</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">37. An AI practitioner is building a model to generate images of humans in various professions. The AI practitioner discovered that the input data is biased and that specific attributes affect the image generation and create bias in the model. Which technique will solve the problem?</div>
+      <div class="options">
+        <div class="option">A.Data</div>
+        <div class="option">B.Model monitoring for class distributior</div>
+        <div class="option">C.Retrieval Augmented Generation （ RAG ）</div>
+        <div class="option">D.Watermark detection for images</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">38. A company is implementing the Amazon Titan foundation model （ FM ） by using Amazon Bedrock. The company needs to supplement the model by using <highlight color="rgb(124,200,104)">relevant data from the company's private data sources. Which solution will meet</highlight> this requirement?</div>
+      <div class="options">
+        <div class="option">A.Use a</div>
+        <div class="option">B.Choose a lower temperature value.</div>
+        <div class="option">C.Create an Amazon Bedrock knowledge</div>
+        <div class="option">D.Enable model invocation logging.</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">39. A medical company is customizing a foundation model （ FM ） for diagnostic purposes. The company needs the model to be transparent and explainable to meet regulatory requirements. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Configure the security and compliance by using Amazon Inspector.</div>
+        <div class="option">B.Generate simple metrics, reports, and examples by using Amazon SageMaker Clarify.</div>
+        <div class="option">C.Encrypt and secure training data by using Amazon Macie.</div>
+        <div class="option">D.Gather more data. Use Amazon</div>
+        <div class="option">A.Auto scaling inference endpoints</div>
+        <div class="option">B.Threat detection</div>
+        <div class="option">C.Data protection</div>
+        <div class="option">D.Cost</div>
+      </div>
+      <div class="answer">答案:B C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">41. A company is training a foundation model （ FM ）。 The company wants to increase the accuracy of the model up to a specific acceptance level.Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Decrease the</div>
+        <div class="option">B.Increase the epochs.</highlight></div>
+        <div class="option">C.Decrease the epochs.</div>
+        <div class="option">D.Increase</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">42. A company is building a large language model （ LLM ） question answering chatbot. The company wants to decrease the number of actions call center <highlight color="rgb(124,200,104)">employees need to take to respond to customer questions. Which business objective</highlight> should the company use to evaluate the effect of the LLM chatbot?</div>
+      <div class="options">
+        <div class="option">A.Website engagement rate</div>
+        <div class="option">B.Average call</div>
+        <div class="option">C.Corporate social responsibility</div>
+        <div class="option">D.Regulatory compliance</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">43. Which functionality does Amazon SageMaker Clarify provide?</div>
+      <div class="options">
+        <div class="option">A.Integrates a Retrieval Augmented</div>
+        <div class="option">B.Monitors the quality of ML models in production</div>
+        <div class="option">C.Documents critical details about ML models</div>
+        <div class="option">D.Identifies potential bias during data</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">44. A company is developing a new model to predict the prices of specific items. The model performed well on the training dataset. When the company deployed the model to production, the model's performance decreased significantly. What should the company do to mitigate this problem?</div>
+      <div class="options">
+        <div class="option">A.Reduce the volume of data that is used</div>
+        <div class="option">B.Add hyperparameters to the model.</div>
+        <div class="option">C.Increase the volume of data that is</div>
+        <div class="option">D.Increase the model training time</div>
+        <div class="option">A.Amazon Lex</div>
+        <div class="option">B.Amazon Comprehend</div>
+        <div class="option">C.Amazon Polly</div>
+        <div class="option">D.Amazon Bedrock E.Amazon</div>
+      </div>
+      <div class="answer">答案:B D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">46. A company wants to use large language models （ LLMs ） with Amazon Bedrock to develop a chat interface for the company's product manuals. The manuals are stored as PDF files. Which solution meets these requirements MOST cost - effectively?</div>
+      <div class="options">
+        <div class="option">A.Use prompt engineering to add one PDF file as context to the user prompt when the</div>
+        <div class="option">B.Use prompt engineering to add all the PDF files</div>
+        <div class="option">C.Use all</div>
+        <div class="option">D.Upload PDF documents to an Amazon Bedrock knowledge base. Use</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">47. A social media company wants to use a large language model （ LLM ） for content moderation. The company wants to evaluate the LLM outputs for bias and potential discrimination against specific groups or individuals. Which data source should the company use to evaluate the LLM outputs with the LEAST administrative effort?</div>
+      <div class="options">
+        <div class="option">A.User -</div>
+        <div class="option">B.Moderation logs</div>
+        <div class="option">C.Content moderation guidelines</div>
+        <div class="option">D.Benchmark datasets</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">48. A company wants to use a pre - trained generative Al model to generate content for its marketing campaigns. The company needs to ensure that the generated content aligns with the company's brand voice and messaging requirements. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Optimize the model's architecture and hyperparameters to improve the model's</div>
+        <div class="option">B.Increase the model's complexity by adding more layers to the</div>
+        <div class="option">C.Create effective prompts that provide clear instructions and</div>
+        <div class="option">D.Select a large, diverse dataset to pre -</div>
+        <div class="option">A.Detect imbalances or disparities in the data.</div>
+        <div class="option">B.Ensure</div>
+        <div class="option">C.Evaluate the model's behavior so that the company can</div>
+        <div class="option">D.Use the Recall - Oriented Understudy for Gisting</div>
+      </div>
+      <div class="answer">答案:A C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">50. A company is using an Amazon Bedrock base model to summarize documents for an internal use case. The company trained a custom model to improve the summarization quality. Which action must the company take to use the custom model through Amazon Bedrock?</div>
+      <div class="options">
+        <div class="option">A.Purchase Provisioned</div>
+        <div class="option">B.Deploy the custom model in an Amazon SageMaker</div>
+        <div class="option">C.Register the model with the Amazon SageMaker Model</div>
+        <div class="option">D.Grant access to the custom model in Amazon Bedrock.</div>
+      </div>
+      <div class="answer">答案: D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">51. A company needs to choose a model from Amazon Bedrock to use internally. The company must identify a model that generates responses in a style that the company's employees prefer. What should the company do to meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Evaluate the models by using built - in prompt datasets.</div>
+        <div class="option">B.Evaluate the models by</div>
+        <div class="option">C.Use public model leaderboards to</div>
+        <div class="option">D.Use the model InvocationLatency runtime metrics in Amazon</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">52. A student at a university is copying content from generative Al to write essays.Which challenge of responsible generative Al does this scenario represent?</div>
+      <div class="options">
+        <div class="option">A.Toxicity</div>
+        <div class="option">B.Hallucinations</div>
+        <div class="option">C.Plagiarism</div>
+        <div class="option">D.Privacy</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">53. A company needs to build its own large language model （ LLM ） based on only the company's private data. The company is concerned about the environmental effect of the training process. Which Amazon EC2 instance type has the LEAST environmental effect when training LLMs?</div>
+      <div class="options">
+        <div class="option">A.Amazon EC2 C series</div>
+        <div class="option">B.Amazon EC2 G series</div>
+        <div class="option">C.Amazon EC2 P series</div>
+        <div class="option">D.Amazon EC2 Trn</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">54. A company wants to build an interactive application for children that generates new stories based on classic stories. The company wants to use Amazon Bedrock and needs to ensure that the results and topics are appropriate for children. Which AWS service or feature will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon Rekognition</div>
+        <div class="option">B.Amazon Bedrock</div>
+        <div class="option">C.Guardrails for Amazon Bedrock</div>
+        <div class="option">D.Agents for Amazon Bedrock</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">55. A company is building an application that needs to generate synthetic data that is <highlight color="rgb(124,200,104)">based on existing data Which type of model can the company use to meet this</highlight> requirement?</div>
+      <div class="options">
+        <div class="option">A.Generative adversarial network （ GAN ）</div>
+        <div class="option">B.XGBoost</div>
+        <div class="option">C.Residual neural</div>
+        <div class="option">D.WaveNet</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">56. A digital devices company wants to predict customer demand for memory hardware. The company does not have coding experience or knowledge of ML algorithms and needs to develop a data - driven predictive model. The company needs to perform analysis on internal data and external data.Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Store the data in Amazon S3. Create ML models and demand forecast</div>
+        <div class="option">B.Import the data into Amazon SageMaker Data Wrangler. Create ML models and</div>
+        <div class="option">C.Import the data</div>
+        <div class="option">D.Import the data into Amazon</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">57. A company has installed a security camera. The company uses an ML model to evaluate the security camera footage for potential thefts. The company has discovered that the model disproportionately flags people who are members of a specific ethnic group. Which type of bias is affecting the model output?</div>
+      <div class="options">
+        <div class="option">A.Measurement bias</div>
+        <div class="option">B.Sampling bias</div>
+        <div class="option">C.Observer bias</div>
+        <div class="option">D.Confirmation bias</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">58. A company is building a customer service chatbot. The company wants the chatbot to improve its responses by learning from past interactions and online resources. Which Al learning strategy provides this self - improvement capability?</div>
+      <div class="options">
+        <div class="option">A.Supervised learning</div>
+        <div class="option">B.Reinforcement</div>
+        <div class="option">C.Unsupervised learning to find</div>
+        <div class="option">D.Supervised learning with a continuously updated</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">59. An AI practitioner has built a deep learning model to classify the types of materials in images. The AI practitioner now wants to measure the model performance Which metric will help the AI practitioner evaluate the performance of the model?</div>
+      <div class="options">
+        <div class="option">A.Confusion matrix</div>
+        <div class="option">B.Correlation matrix</div>
+        <div class="option">C.R2 score</div>
+        <div class="option">D.Mean squared error （ MSE ）</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">60. A company has built a chatbot that can respond to natural language questions with images. The company wants to ensure that the chatbot does not return inappropriate or unwanted images. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Implement moderation</div>
+        <div class="option">B.Retrain the model with a general public dataset.</div>
+        <div class="option">C.Perform model validation.</div>
+        <div class="option">D.Automate user feedback integration.</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">61. An Al practitioner is using an Amazon Bedrock base model to summarize session chats from the customer service department. The Al practitioner wants to store invocation logs to monitor model input and output data. Which strategy should the Al practitioner use?</div>
+      <div class="options">
+        <div class="option">A.Configure AWS CloudTrail as the logs</div>
+        <div class="option">B.Enable invocation logging in Amazon Bedrock.</div>
+        <div class="option">C.Configure AWS Audit Manager as the logs destination for the model.</div>
+        <div class="option">D.Configure</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">62. A company is building an ML model to analyze archived data. The company must perform <highlight color="rgb(124,200,104)">inference</highlight> on large datasets that are multiple GBs in size. The company does <highlight color="rgb(124,200,104)">not need to access the model predictions immediately. Which Amazon SageMaker</highlight>  <highlight color="rgb(124,200,104)">inference</highlight> option will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Batch</div>
+        <div class="option">B.Real - time <highlight color="rgb(124,200,104)">inference</highlight></div>
+        <div class="option">C.Serverless <highlight</div>
+        <div class="option">D.Asynchronous <highlight</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">63. Which term describes the numerical representations of real - world objects and concepts that AI and natural language processing （ NLP ） models use to improve understanding of textual information?</div>
+      <div class="options">
+        <div class="option">A.Embeddings</div>
+        <div class="option">B.Tokens</div>
+        <div class="option">C.Models</div>
+        <div class="option">D.Binaries</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">64. A research company implemented a chatbot by using a foundation model （ FM ） from Amazon Bedrock. The chatbot searches for answers to questions from a large database of research papers. After multiple prompt engineering attempts, the company notices that the FM is performing poorly because of the complex scientific terms in the research papers. How can the company improve the performance of the chatbot?</div>
+      <div class="options">
+        <div class="option">A.Use few - shot prompting to define how the FM can answer</div>
+        <div class="option">B.Use domain adaptation fine - tuning to adapt the FM to complex</div>
+        <div class="option">C.Change the FM <highlight color="rgb(124,200,104)">inference</highlight></div>
+        <div class="option">D.Clean the research paper data to remove complex scientific terms.</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">65. A company wants to use a large language model （ LLM ） on Amazon Bedrock for <highlight color="rgb(124,200,104)">sentiment</highlight> analysis. The company needs the LLM to produce more consistent responses to the same input prompt. Which adjustment to an <highlight color="rgb(124,200,104)">inference</highlight> parameter should the company make to meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Decrease the temperature value.</div>
+        <div class="option">B.Increase the temperature value</div>
+        <div class="option">C.Decrease the length of output tokens.</div>
+        <div class="option">D.Increase the maximum generation length.</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">66. A company wants to develop a large language model （ LLM ） application by using Amazon Bedrock and customer data that is uploaded to Amazon S3. The company's security policy states that each team can access data for only the team's own customers. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Create an Amazon Bedrock custom service role for each</div>
+        <div class="option">B.Create a custom service role</div>
+        <div class="option">C.Redact personal data in Amazon S3. Update the S3 bucket policy to allow team</div>
+        <div class="option">D.Create one Amazon Bedrock role that has full Amazon S3</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">67. A medical company deployed a disease detection model on Amazon Bedrock. To comply with privacy policies, the company wants to prevent the model from including personal patient information in its responses. The company also wants to receive notification when policy violations occur Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Use Amazon Macie to scan the model's output for sensitive data and set</div>
+        <div class="option">B.Configure AWS CloudTrail to monitor the model's</div>
+        <div class="option">C.Use Guardrails for</div>
+        <div class="option">D.Implement Amazon SageMaker Model Monitor to detect data drift and</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">68. A company manually reviews all submitted resumes in PDF format. As the company grows, the company expects the volume of resumes to exceed the company's review capacity. The company needs an automated system to convert the <highlight color="rgb(124,200,104)">PDF resumes into plain text format for additional processing</highlight>. Which AWS service meets this requirement?</div>
+      <div class="options">
+        <div class="option">A.Amazon Textract</div>
+        <div class="option">B.Amazon Personalize</div>
+        <div class="option">C.Amazon Lex</div>
+        <div class="option">D.Amazon Transcribe</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">69. An education provider is building a question and answer application that uses a generative Al model to explain complex concepts. The education provider wants to automatically change the style of the model response depending on who is asking the question. The education provider will give the model the age range of the user who has asked the question. Which solution meets these requirements with the LEAST implementation effort?</div>
+      <div class="options">
+        <div class="option">A.Fine tune the model by using additional training data that is representative of the</div>
+        <div class="option">B.Add a role description to the</div>
+        <div class="option">C.Use chain - of - thought reasoning to deduce the correct style and complexity</div>
+        <div class="option">D.Summarize the response text depending on the</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">70. Which strategy evaluates the <highlight color="rgb(124,200,104)">accuracy</highlight> of a foundation model （ FM ） that is used in <highlight color="rgb(124,200,104)">image classification tasks</highlight>?</div>
+      <div class="options">
+        <div class="option">A.Topic modeling</div>
+        <div class="option">B.Clustering models</div>
+        <div class="option">C.Prescriptive ML models</div>
+        <div class="option">D.BERT - based</div>
+      </div>
+      <div class="answer">答案: B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">71. A company wants to display the total sales for its top - selling products across various retail locations in the past 12 months.Which AWS solution should the company use to automate the generation of graphs?</div>
+      <div class="options">
+        <div class="option">A.Amazon Q in Amazon EC2</div>
+        <div class="option">B.Amazon Q Developer</div>
+        <div class="option">C.Amazon Q in Amazon QuickSight</div>
+        <div class="option">D.Amazon Q in AWS Chatbot</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">72. A company is building a chatbot to improve user experience. The company is using a large language model （ LLM ） from Amazon Bedrock for intent detection. The company wants to use few - shot learning to improve intent detection accuracy. Which additional data does the company need to meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Pairs of chatbot responses and correct user intents</div>
+        <div class="option">B.Pairs</div>
+        <div class="option">C.Pairs of user messages and correct user</div>
+        <div class="option">D.Pairs of user intents and correct chatbot responses</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">73. A company is using few - shot prompting on a base model that is hosted on Amazon Bedrock. The model currently uses 10 examples in the prompt.The model is invoked once daily and is performing well. The company wants to lower the monthly cost. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Customize the model by using fine - tuning.</div>
+        <div class="option">B.Decrease the number</div>
+        <div class="option">C.Increase the number of tokens in the prompt.</div>
+        <div class="option">D.Use</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">74. An AI practitioner is using a large language model （ LLM ） to create content for marketing campaigns. The generated content sounds plausible and factual but is incorrect. Which problem is the LLM having?</div>
+      <div class="options">
+        <div class="option">A.Data leakage</div>
+        <div class="option">B.Hallucination</div>
+        <div class="option">C.Overfitting</div>
+        <div class="option">D.Underfitting</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">75. An AI practitioner trained a custom model on Amazon Bedrock by using a training dataset that contains confidential data. The AI practitioner wants to ensure that the custom model does not generate <highlight color="rgb(124,200,104)">inference</highlight> responses based on confidential data. How should the AI practitioner prevent responses based on confidential data?</div>
+      <div class="options">
+        <div class="option">A.Delete the custom model. Remove the confidential data from</div>
+        <div class="option">B.Mask the confidential data in the <highlight</div>
+        <div class="option">C.Encrypt the confidential data in the <highlight color="rgb(124,200,104)">inference</highlight></div>
+        <div class="option">D.Encrypt the confidential data in the custom model</div>
+      </div>
+      <div class="answer">答案: A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">76. A company has built a solution by using generative Al. The solution uses large language models （ LLMs ） to translate training manuals from English into other languages. The company wants to evaluate the accuracy of the solution by examining the text generated for the manuals. Which model evaluation strategy meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Bilingual Evaluation</div>
+        <div class="option">B.Root mean squared error （ RMSE ）</div>
+        <div class="option">C.Recall - Oriented Understudy</div>
+        <div class="option">D.F1 score</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">77. A large retailer receives thousands of customer support inquiries about products every day. The customer support inquiries need to be processed and responded to quickly. The company wants to implement Agents for Amazon Bedrock. What are the key benefits of using Amazon Bedrock agents that could help this retailer?</div>
+      <div class="options">
+        <div class="option">A.Generation of custom foundation models （ FMs ） to predict customer</div>
+        <div class="option">B.Automation of repetitive tasks and orchestration of complex workflows</div>
+        <div class="option">C.Automatically calling multiple foundation models （ FMs ） and consolidating the results</div>
+        <div class="option">D.Selecting the <highlight color="rgb(124,200,104)">foundation model</highlight> （ FM ） based on</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">78. Which option is a benefit of ongoing pre - training when fine - tuning a <highlight color="rgb(124,200,104)">foundation  model</highlight> （ FM ） ?</div>
+      <div class="options">
+        <div class="option">A.Helps decrease the model's complexity</div>
+        <div class="option">B.Improves model performance over time</div>
+        <div class="option">C.Decreases the training time requirement</div>
+        <div class="option">D.Optimizes model inference time</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">79. What are tokens in the context of generative Al models?</div>
+      <div class="options">
+        <div class="option">A.Tokens are the basic units of input</div>
+        <div class="option">B.Tokens are the mathematical representations of words or</div>
+        <div class="option">C.Tokens are the pre - trained weights of a</div>
+        <div class="option">D.Tokens are the specific</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">80. A company wants to assess the costs that are associated with using a large language model （ LLM ） to generate inferences. The company wants to use Amazon Bedrock to build generative Al applications. Which factor will drive the inference costs?</div>
+      <div class="options">
+        <div class="option">A.Number of</div>
+        <div class="option">B.Temperature value</div>
+        <div class="option">C.Amount of data used to train the LLM</div>
+        <div class="option">D.Total</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">81. A company is using Amazon SageMaker Studio notebooks to build and train ML models. The company stores the data in an Amazon S3 bucket.The company needs to manage the flow of data from Amazon S3 to SageMaker Studio notebooks. Which solution will meet this requirement?</div>
+      <div class="options">
+        <div class="option">A.Use Amazon Inspector to monitor SageMaker Studio.</div>
+        <div class="option">B.Use Amazon Macie to monitor</div>
+        <div class="option">C.Configure SageMaker to use a VPC with an S3 endpoint.</div>
+        <div class="option">D.Configure</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">82. A company has a foundation model （ FM ） that was customized by using Amazon Bedrock to answer customer queries about products. The company wants to validate the model's responses to new types of queries. The company needs to upload a new dataset that Amazon Bedrock can use for validation Which AWS service meets these requirements</div>
+      <div class="options">
+        <div class="option">A.Amazon S3</div>
+        <div class="option">B.Amazon Elastic Block Store （ Amazon EBS ）</div>
+        <div class="option">C.Amazon Elastic File System （ Amazon EFS ）</div>
+        <div class="option">D.AWS Snowcone</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">83. Which prompting attack directly exposes the configured behavior of a large language model （ LLM ） ?</div>
+      <div class="options">
+        <div class="option">A.Prompted persona switches</div>
+        <div class="option">B.Exploiting friendliness and trust</div>
+        <div class="option">C.Ignoring the prompt</div>
+        <div class="option">D.Extracting the prompt template</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">84. A company wants to use Amazon Bedrock. The company needs to review which security aspects the company is responsible for when using Amazon Bedrock Which security aspect will the company be responsible for?</div>
+      <div class="options">
+        <div class="option">A.Patching and updating the versions of Amazon Bedrock</div>
+        <div class="option">B.Protecting the infrastructure</div>
+        <div class="option">C.Securing the company's data in transit and at rest</div>
+        <div class="option">D.Provisioning Amazon Bedrock within the company network</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">85. A social media company wants to use a large language model （ LLM ） to summarize messages. The company has chosen a few LLMs that are available on Amazon SageMaker JumpStart. The company wants to compare the generated output toxicity of these models. Which strategy gives the company the ability to evaluate the LLMs with the LEAST operational overhead?</div>
+      <div class="options">
+        <div class="option">A.Crowd - sourced evaluation</div>
+        <div class="option">B.Automatic model evaluation</div>
+        <div class="option">C.Model</div>
+        <div class="option">D.Reinforcement learning from human feedback （ RLHF ）</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">86. A company is testing the security of a foundation model （ FM ）。 During testing, the company wants to get around the safety features and make harmful content. Which security technique is this an example of?</div>
+      <div class="options">
+        <div class="option">A.Fuzzing training data to find</div>
+        <div class="option">B.Denial of service （ DoS ）</div>
+        <div class="option">C.Penetration testing with authorization</div>
+        <div class="option">D.Jailbreak</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">87. A company needs to use Amazon SageMaker for model training and inference. The company must comply with regulatory requirements to run SageMaker jobs in an isolated environment without internet access. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Run SageMaker training and inference by using SageMaker Experiments.</div>
+        <div class="option">B.Run SageMaker training and Inference by using network Isolation.</div>
+        <div class="option">C.Encrypt the data at</div>
+        <div class="option">D.Associate appropriate</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">88. An ML research team develops custom ML models. The model artifacts are shared with other teams for integration into products and services.The ML team retains the model training code and data. The ML team wants to build a mechanism that the ML team can use to audit models.Which solution should the ML team use when publishing the custom ML models?</div>
+      <div class="options">
+        <div class="option">A.Create documents with the relevant information. Store the documents in Amazon S3.</div>
+        <div class="option">B.Use AWS Al Service Cards for transparency and understanding models.</div>
+        <div class="option">C.Create Amazon</div>
+        <div class="option">D.Create</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">89. A software company builds tools for customers. The company wants to use Al to increase software development productivity.Which solution will meet these requirements</div>
+      <div class="options">
+        <div class="option">A.Use a binary classification model to generate code reviews.</div>
+        <div class="option">B.Install code</div>
+        <div class="option">C.Install a code forecasting</div>
+        <div class="option">D.Use a natural language processing （ NLP ） tool</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">90. A retail store wants to predict the demand for a specific product for the next few weeks by using the Amazon SageMaker DeepAR forecasting algorithm. Which type of data will meet this requirement?</div>
+      <div class="options">
+        <div class="option">A.Text data</div>
+        <div class="option">B.Image data</div>
+        <div class="option">C.Time series data</div>
+        <div class="option">D.Binary data</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">91. A large retail bank wants to develop an ML system to help the risk management team decide on loan allocations for different demographics What must the bank do to develop an unbiased ML model?</div>
+      <div class="options">
+        <div class="option">A.Reduce the size of</div>
+        <div class="option">B.Ensure that the ML model predictions are consistent with</div>
+        <div class="option">C.Create a different ML model for each demographic group.</div>
+        <div class="option">D.Measure</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">92. Which prompting technique can <highlight color="rgb(124,200,104)">protect</highlight> against prompt injection attacks?</div>
+      <div class="options">
+        <div class="option">A.Adversarial prompting</div>
+        <div class="option">B.Zero - shot prompting</div>
+        <div class="option">C.Least - to - most prompting</div>
+        <div class="option">D.Chain - of - thought prompting</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">93. A company has fine - tuned a large language model （ LLM ） to answer questions for a help desk. The company wants to determine if the fine - tuning has enhanced the model's accuracy. Which metric should the company use for the evaluation?</div>
+      <div class="options">
+        <div class="option">A.Precision</div>
+        <div class="option">B.Time to first token</div>
+        <div class="option">C.F1</div>
+        <div class="option">D.Word error rate</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">94. A company is using Retrieval Augmented Generation （ RAG ） with Amazon Bedrock and Stable Diffusion to generate product images based on text descriptions. The results are often random and lack specific details. The company wants to increase the specificity of the generated images Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Increase the number of generation steps.</div>
+        <div class="option">B.Use the MASK_IMAGE_BLACK mask</div>
+        <div class="option">C.Increase the classifier - free guidance （ CFG ） scale.</div>
+        <div class="option">D.Increase the</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">95. A company wants to implement a large language model （ LLM ） based chatbot to provide customer service agents with real - time contextual responses to customers' inquiries. The company will use the company's policies as the knowledge base. Which solution will meet these requirements MOST cost - effectively?</div>
+      <div class="options">
+        <div class="option">A.Retrain the</div>
+        <div class="option">B.Fine - tune the LLM on the company policy data.</div>
+        <div class="option">C.Implement Retrieval Augmented Generation （ RAG ） for in - context responses.</div>
+        <div class="option">D.Use pre - training and data augmentation on the company policy data.</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">96. A company wants to create a new solution by using AWS Glue. The company has <highlight color="rgb(124,200,104)">minimal programming experience with AWS Glue.Which AWS service can help the</highlight> company use AWS Glue?</div>
+      <div class="options">
+        <div class="option">A.Amazon Q Developer</div>
+        <div class="option">B.AWS Config</div>
+        <div class="option">C.Amazon Personalize</div>
+        <div class="option">D.Amazon Comprehend</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">97. A company is developing a mobile ML app that uses a phone's camera to diagnose and treat insect bites. The company wants to train an image classification model by using a diverse dataset of insect bite photos from different genders, ethnicities, and geographic locations around the world. Which principle of responsible Al does the company demonstrate in this scenario?</div>
+      <div class="options">
+        <div class="option">A.Fairness</div>
+        <div class="option">B.Explainability</div>
+        <div class="option">C.Governance</div>
+        <div class="option">D.Transparency</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">98. A company is developing an ML model to make loan approvals. The company must implement a solution to detect bias in the model. The company must also be able to explain the model's predictions. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon SageMaker Clarify</div>
+        <div class="option">B.Amazon SageMaker</div>
+        <div class="option">C.Amazon SageMaker Model Cards</div>
+        <div class="option">D.AWS AI Service Cards</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">99. A company has developed a generative text summarization model by using Amazon Bedrock. The company will use Amazon Bedrock automaticl model evaluation capabilities. Which metric should the company use to evaluate the <highlight color="rgb(124,200,104)">accuracy of the model?</highlight></div>
+      <div class="options">
+        <div class="option">A.Area Under the ROC Curve （ AUC ） score</div>
+        <div class="option">B.F1</div>
+        <div class="option">C.BERTScore</div>
+        <div class="option">D.Real world knowledge （ RWK ） score</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">100. An AI practitioner wants to predict the classification of flowers based on petal length, petal width, sepal length, and sepal width.Which algorithm meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.K - nearest</div>
+        <div class="option">B.K - mean</div>
+        <div class="option">C.Autoregressive Integrated Moving Average （ ARIMA ）</div>
+        <div class="option">D.Linear regression</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">101. A company is using custom models in Amazon Bedrock for a generative Al application. The company wants to use a company managed encryption key to encrypt the model artifacts that the model customization jobs create. Which AWS service meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.AWS Key Management Service （ AWS KMS ）</div>
+        <div class="option">B.Amazon Inspector</div>
+        <div class="option">C.Amazon Macie</div>
+        <div class="option">D.AWS Secrets Manager</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">102. A company wants to use large language models （ LLMs ） to produce code from natural language code comments.Which LLM feature meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Text summarization</div>
+        <div class="option">B.Text generation</div>
+        <div class="option">C.Text completion</div>
+        <div class="option">D.Text classification</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">103. A company is introducing a mobile app that helps users learn foreign languages. The app makes text more coherent by calling a large language model （ LLM ）。 The company collected a diverse dataset of text and supplemented the dataset with examples of more readable versions. The company wants the LLM output to <highlight color="rgb(124,200,104)">resemble the provided examples. Which metric should the company use to assess</highlight> whether the LLM meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Value of the loss function</div>
+        <div class="option">B.Semantic robustness</div>
+        <div class="option">C.Recall - Oriented Understudy for</div>
+        <div class="option">D.Latency of the text generation</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">104. A company notices that its foundation model （ FM ） generates images that are unrelated to the prompts. The company wants to modify the prompt techniques to decrease unrelated images. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Use zero - shot prompts.</div>
+        <div class="option">B.Use negative</div>
+        <div class="option">C.Use positive prompts.</div>
+        <div class="option">D.Use ambiguous prompts.</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">105. A company wants to use a large language model （ LLM ） to generate concise, feature - specific descriptions for the company's products. Which prompt engineering technique meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Create one prompt that covers all products. Edit the responses to make the responses</div>
+        <div class="option">B.Create prompts for each product</div>
+        <div class="option">C.Include a diverse range of product features in each prompt</div>
+        <div class="option">D.DProvide detailed, product - specific</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">106. A company is developing an ML model to predict customer churn. The model performs well on the training dataset but does not accurately predict churn for new data. Which solution will resolve this issue?</div>
+      <div class="options">
+        <div class="option">A.Decrease the regularization parameter to</div>
+        <div class="option">B.Increase the regularization parameter to decrease model</div>
+        <div class="option">C.Add more features to the input data.</div>
+        <div class="option">D.Train the model for more epochs.</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">107. A company is implementing intelligent agents to provide conversational search experiences for its customers. The company needs a database service that will support storage and queries of embeddings from a generative Al model as vectors in the database. Which AWS service will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon Athena</div>
+        <div class="option">B.Amazon Aurora</div>
+        <div class="option">C.Amazon Redshift</div>
+        <div class="option">D.Amazon EMR</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">108. A financial institution is building an Al solution to make loan approval decisions by using a foundation model （ FM ）。 For security and audit purposes, the company needs the Al solution's decisions to be explainable. Which factor relates to the explainability of the Al solution's decisions?</div>
+      <div class="options">
+        <div class="option">A.Model complexity</div>
+        <div class="option">B.Training time</div>
+        <div class="option">C.Number of hyperparameters</div>
+        <div class="option">D.Deployment time</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">109. A pharmaceutical company wants to analyze user reviews of new medications and provide a concise overview for each medication.Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Create a time - series forecasting model to analyze the medication reviews by using</div>
+        <div class="option">B.Create medication review summaries by using Amazon Bedrock large language models</div>
+        <div class="option">C.Create a classification model that categorizes medications into different</div>
+        <div class="option">D.Create medication review summaries by using Amazon</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">110. A company wants to build a lead prioritization application for its employees to <highlight color="rgb(124,200,104)">contact potential customers. The application must give employees the ability to view</highlight> and adjust the weights assigned to different variables in the model based on domain knowiedge and expertise. Which ML model type meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Logistic regression model</div>
+        <div class="option">B.Deep</div>
+        <div class="option">C.K - nearest neighbors （ k - NN ） model</div>
+        <div class="option">D.Neural network</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">111. Which strategy will determine if a foundation model （ FM ） effectively meets business objectives?</div>
+      <div class="options">
+        <div class="option">A.Evaluate the model's performance on benchmark</div>
+        <div class="option">B.Analyze the model's architecture and hyperparameters.</div>
+        <div class="option">C.Assess the model's</div>
+        <div class="option">D.Measure the computational resources required for</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">112. A company needs to train an ML model to classify images of different types of animals. The company has a large dataset of labeled images and will not label more data. Which type of learning should the company use to train the model?</div>
+      <div class="options">
+        <div class="option">A.Supervised learning</div>
+        <div class="option">B.Unsupervised learning</div>
+        <div class="option">C.Reinforcement learning</div>
+        <div class="option">D.Active learning</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">113. Which phase of the ML lifecycle determines compliance and regulatory requirements?</div>
+      <div class="options">
+        <div class="option">A.Feature engineering</div>
+        <div class="option">B.Model training</div>
+        <div class="option">C.Data collection</div>
+        <div class="option">D.Business goal</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">114. A food service company wants to develop an ML model to help decrease daily food waste and increase sales revenue. The company needs to continuously improve the model's accuracy. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Use Amazon</div>
+        <div class="option">B.Use Amazon Personalize and iterate with</div>
+        <div class="option">C.Use Amazon CloudWatch to analyze customer orders.</div>
+        <div class="option">D.Use Amazon</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">115. A company has developed an ML model to predict real estate sale prices. The company wants to deploy the model to make predictions without managing servers or infrastructure. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Deploy the model on an Amazon EC2 instance.</div>
+        <div class="option">B.Deploy the model on an</div>
+        <div class="option">C.Deploy the model by using</div>
+        <div class="option">D.Deploy the model by using an Amazon</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">116. A company wants to develop an Al application to help its employees check open customer claims, identify details for a specific claim, and access documents for a claim. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Use Agents for Amazon</div>
+        <div class="option">B.Use Agents for Amazon</div>
+        <div class="option">C.Use Amazon Personalize with Amazon Bedrock knowledge bases to build the</div>
+        <div class="option">D.Use Amazon SageMaker to build the application by training a new ML model.</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">117. A manufacturing company uses Al to inspect products and find any damages or <highlight color="rgb(124,200,104)">defects.Which type of Al application is the company using?</highlight></div>
+      <div class="options">
+        <div class="option">A.Recommendation system</div>
+        <div class="option">B.Natural language</div>
+        <div class="option">C.Computer vision</div>
+        <div class="option">D.Image processing</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">118. A company wants to create an ML model to predict customer satisfaction. The company needs fully automated model tuning.Which AWS service meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon Personalize</div>
+        <div class="option">B.Amazon</div>
+        <div class="option">C.Amazon Athena</div>
+        <div class="option">D.Amazon Comprehend</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">119. Which technique can a company use to lower bias and toxicity in generative AI applications during the post - processing ML lifecycle?</div>
+      <div class="options">
+        <div class="option">A.Human - in - the - loop</div>
+        <div class="option">B.Data augmentation</div>
+        <div class="option">C.Feature</div>
+        <div class="option">D.Adversarial training</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">120. A bank has fine - tuned a large language model （ LLM ） to expedite the loan approval process. During an external audit of the model, the company discovered that the model was approving loans at a faster pace for a specific demographic than for other demographics. How should the bank fix this issue MOST cost - effectively?</div>
+      <div class="options">
+        <div class="option">A.Include more diverse training data. Fine - tune the model again by using the new</div>
+        <div class="option">B.Use Retrieval Augmented Generation （ RAG ） with the fine - tuned model.</div>
+        <div class="option">C.Use</div>
+        <div class="option">D.Pre - train a new LLM with more diverse</div>
+        <div class="option">A.AWS CloudTrail</div>
+        <div class="option">B.Amazon CloudWatch</div>
+        <div class="option">C.AWS Audit Manager</div>
+        <div class="option">D.Amazon S3 Intelligent - Tiering E.Amazon S3 Standard</div>
+      </div>
+      <div class="answer">答案:A - 2,B - 1,C - 2 解析 :</div>
+    </div>
+    <div class="question">
+      <div class="question-number">124. A music company wants to build a system to search for songs by the meaning of <highlight color="rgb(124,200,104)">the lyrics. Which solution meets this requirement?</highlight></div>
+      <div class="options">
+        <div class="option">A.Create prompts from the lyrics. Use Amazon</div>
+        <div class="option">B.Create vector embeddings from the lyrics. Use Amazon</div>
+        <div class="option">C.Create tokens. Use Amazon Lex for searching.</div>
+        <div class="option">D.Create stems. Use Amazon Personalize for searching.</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">125. An ecommerce company is developing a new mobile app. The app will give users the ability to search the company's product catalog by entering keyword search terms or by uploading a photo of a similar item to find visually similar products. The company wants to use Amazon Titan for both search capabilities. Which Amazon Titan model meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon Titan Text Express</div>
+        <div class="option">B.Amazon Titan Text Lite</div>
+        <div class="option">C.Amazon Titan Embeddings</div>
+        <div class="option">D.Amazon Titan Multimodal Embeddings</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">126. A company wants to use Amazon Bedrock to summarize the customer documents that are in the company's database. Which metric will evaluate the accuracy of the summaries?</div>
+      <div class="options">
+        <div class="option">A.BERTScore</div>
+        <div class="option">B.Root mean squared error (RSE)</div>
+        <div class="option">C.Detoxify algorithm</div>
+        <div class="option">D.Mean absolute percentage error (MAPE)</div>
+        <div class="option">A.Amazon Neptune</div>
+        <div class="option">B.Amazon Elastic Kubernetes</div>
+        <div class="option">C.Amazon S3</div>
+        <div class="option">D.Amazon OpenSearch Service E.Amazon EMR</div>
+      </div>
+      <div class="answer">答案:A D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">128. A food company wants to use generative AI to automatically generate product descriptions based on customer profiles and the product catalog. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Use an Amazon Bedrock standalone third - party foundation model (FM).</div>
+        <div class="option">B.Implement a data lake on Aws that is customized to the product catalog.</div>
+        <div class="option">C.Implement</div>
+        <div class="option">D.Use an Amazon</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">129. A company uses a <highlight color="rgb(124,200,104)">foundation model</highlight> (FM) on Amazon Bedrock for text summarization. The company wants to check the accuracy, robustness, and non - <highlight color="rgb(124,200,104)">toxicity of the FM. Which Amazon Bedrock feature or resource provides the ability</highlight> to assess the FM?</div>
+      <div class="options">
+        <div class="option">A.Agents for Amazon Bedrock</div>
+        <div class="option">B.Amazon Bedrock model evaluation job report cards</div>
+        <div class="option">C.Amazon</div>
+        <div class="option">D.Amazon Bedrock inference parameters</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">130. A company wants to build its own generative Al application by using an existing third - party <highlight color="rgb(124,200,104)">foundation model</highlight> (FM). The company wants to directly integrate the third - party FM with the company's workload by using an API. Which scope in the Generative AI Security Scoping Matrix does this use case apply to?</div>
+      <div class="options">
+        <div class="option">A.Enterprise App</div>
+        <div class="option">B.Fine - tuned Models</div>
+        <div class="option">C.Pre - trained Models</div>
+        <div class="option">D.Self - trained Models</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">131. A company is building a chatbot to answer customer questions by using a <highlight color="rgb(124,200,104)">foundation model</highlight> (FM). The company wants to confirm that the model is unbiased and fair. Which solution will assess the fairness of the model?</div>
+      <div class="options">
+        <div class="option">A.Fine</div>
+        <div class="option">B.User surveys about chatbot satisfaction</div>
+        <div class="option">C.Automatic model evaluation tasks</div>
+        <div class="option">D.Regular accuracy testing of chatbot responses</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">132. A company is building a language model application. The company wants to protect against prompt injection attacks. Which option is an example of a prompt injection attack?</div>
+      <div class="options">
+        <div class="option">A.Cryptographic failures</div>
+        <div class="option">B.Extracting conversation history</div>
+        <div class="option">C.Broken access</div>
+        <div class="option">D.Server - side request forgery</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">133. An AI practitioner is generating a prompt for a large language model (LLM). The problem requires complex, multi - step reasoning. Which prompt engineering technique should the AI practitioner use to meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Chain - of - thought prompting</div>
+        <div class="option">B.Zero - shot prompting</div>
+        <div class="option">C.Prompt</div>
+        <div class="option">D.Retrieval Augmented Generation (RAG)</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">134. A company is developing an ML model to predict customer churn. The model performs well on the training dataset but does not accurately predict churn for new data. Which solution will resolve this issue?</div>
+      <div class="options">
+        <div class="option">A.Decrease the regularization parameter to increase model complexity.</div>
+        <div class="option">B.Increase the</div>
+        <div class="option">C.Add more features to the input</div>
+        <div class="option">D.Train the model for more epochs.</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">135. An ecommerce company wants to build a forecasting model to predict demand for products. Which data type meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Unstructured data</div>
+        <div class="option">B.Time - series data</div>
+        <div class="option">C.Labeled data</div>
+        <div class="option">D.Unlabeled data</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">136. Which characteristic of generative Al models is an advantage in natural language processing (NLP) tasks?</div>
+      <div class="options">
+        <div class="option">A.Inherent transparency</div>
+        <div class="option">B.Deterministic outputs</div>
+        <div class="option">C.Novel</div>
+        <div class="option">D.Computational efficiency</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">137. A company is using domain - specific models. The company wants to avoid creating new models from the beginning. The company instead wants to adapt pre - trained models to create models for new, related tasks. Which ML strategy meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Increase the number of epochs.</div>
+        <div class="option">B.Use transfer</div>
+        <div class="option">C.Decrease the number of epochs.</div>
+        <div class="option">D.Use unsupervised learning.</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">138. A company is using prompt engineering to provide customized outputs for text generation. The company needs the model to generate responses that use industry - specific jargon and technical terms. The company has a small amount of unlabeled data and must use this data to customize the model. The solution must use minimal computational resources. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Pre - train a new LLM based on the</div>
+        <div class="option">B.Perform domain adaptation fine - tuning on the existing model.</div>
+        <div class="option">C.Perform instruction - based fine - tuning based on the unlabeled data.</div>
+        <div class="option">D.Fine - tune</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">139. A company is introducing a new feature for its application. The feature will refine the style of output messages. The company will fine - tune a large language model (LLM) on Amazon Bedrock to implement the feature. Which type of data does the company need to meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Samples of only input messages</div>
+        <div class="option">B.Samples of only output messages</div>
+        <div class="option">C.Samples of pairs of input and output messages</div>
+        <div class="option">D.Separate samples of input and output messages</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">140. Which strategy evaluates the accuracy of a foundation model (FM) that is used in image classification tasks?</div>
+      <div class="options">
+        <div class="option">A.Calculate the total cost of resources used by the model.</div>
+        <div class="option">B.Measure the model's</div>
+        <div class="option">C.Count the number of layers in the</div>
+        <div class="option">D.Assess the color accuracy of images processed by the model.</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">141. Which option is a characteristic of Al governance frameworks for building trust and deploying human - centered AI technologies?</div>
+      <div class="options">
+        <div class="option">A.Expanding initiatives across business</div>
+        <div class="option">B.Ensuring alignment with business standards,</div>
+        <div class="option">C.Overcoming challenges to drive business</div>
+        <div class="option">D.Developing policies and guidelines for data, transparency,</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">142. Which option is a benefit of using Amazon SageMaker Model Cards to document AI models?</div>
+      <div class="options">
+        <div class="option">A.Providing a visually appealing summary of</div>
+        <div class="option">B.Standardizing information about a model's purpose,</div>
+        <div class="option">C.Reducing the overall computational requirements of a</div>
+        <div class="option">D.Physically storing models for archival purposes.</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">143. What does an F1 score measure in the context of foundation model (FM) performance?</div>
+      <div class="options">
+        <div class="option">A.Model precision and</div>
+        <div class="option">B.Model speed in generating responses</div>
+        <div class="option">C.Financial cost of operating the model</div>
+        <div class="option">D.Energy efficiency of the model's computations</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">144. A company is building an ML model. The company collected new data and <highlight color="rgb(124,200,104)">analyzed the data by creating a correlation matrix, calculating statistics, and</highlight> visualizing the data. Which stage of the ML pipeline is the company currently in?</div>
+      <div class="options">
+        <div class="option">A.Data pre - processing</div>
+        <div class="option">B.Feature engineering</div>
+        <div class="option">C.Exploratory data analysis</div>
+        <div class="option">D.Hyperparameter tuning</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">145. A company deployed an AI/ML solution to help customer service agents respond to frequently asked questions. The questions can change over time. The company wants to give customer service agents the ability to ask questions and receive automatically generated answers to common customer questions. Which strategy will meet these requirements MOST cost - effectively?</div>
+      <div class="options">
+        <div class="option">A.Fine - tune the model regularly.</div>
+        <div class="option">B.Train the model by using context data.</div>
+        <div class="option">C.Pre -</div>
+        <div class="option">D.Use Retrieval Augmented</div>
+        <div class="option">A.Generation of content embeddings</div>
+        <div class="option">B.Generation of</div>
+        <div class="option">C.Creation of the search index</div>
+        <div class="option">D.Retrieval of relevant</div>
+      </div>
+      <div class="answer">答案:A C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">147. A company built an AI - powered resume screening system. The company used a large dataset to train the model The dataset contained resumes that were not <highlight color="rgb(124,200,104)">representative of all demographics. Which core dimension of responsible AI does</highlight> this scenario present?</div>
+      <div class="options">
+        <div class="option">A.Fairness</div>
+        <div class="option">B.Explainability</div>
+        <div class="option">C.Privacy and security</div>
+        <div class="option">D.Transparency</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">148. An ecommerce company is developing a new mobile app. The app will give users the ability to search the company's product catalog by entering keyword search terms or by uploading a photo of a similar item to find visually similar products. The company wants to use Amazon Titan for both search capabilities. Which Amazon Titan model meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon Titan</div>
+        <div class="option">B.Amazon Titan Text Lite</div>
+        <div class="option">C.Amazon Titan Embeddings</div>
+        <div class="option">D.Amazon Titan</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">149. An airline company wants to build a conversational AI assistant to answer customer questions about flight schedules, booking, and payments. The company wants to use large language models (LLMs) and a knowledge base to create a text - based chatbot interface. Which solution will meet these requirements with the LEAST development effort?</div>
+      <div class="options">
+        <div class="option">A.Train models on Amazon SageMaker Autopilot.</div>
+        <div class="option">B.Develop a</div>
+        <div class="option">C.Create a Python</div>
+        <div class="option">D.Fine - tune models on Amazon SageMaker</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">150. A company wants to keep its foundation model (FM) relevant by using the most recent data. The company wants to implement a model training strategy that includes regular updates to the FM. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Batch</div>
+        <div class="option">B.Continuous pre - training</div>
+        <div class="option">C.Static training</div>
+        <div class="option">D.Latent training</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">151. A financial company is developing a generative Al application for loan approval decisions. The company needs the application output to be responsible and fair. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Review the</div>
+        <div class="option">B.Use a deep learning model with many hidden layers.</div>
+        <div class="option">C.Keep the model's decision -</div>
+        <div class="option">D.Continuously monitor the</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">152. A company is using a large language model (LLM) on Amazon Bedrock to build a chatbot. The chatbot processes customer support requests. To resolve a request, the customer and the chatbot must interact a few times. Which solution gives the LLM the ability to use content from previous customer messages?</div>
+      <div class="options">
+        <div class="option">A.Turn on model invocation logging to collect messages.</div>
+        <div class="option">B.Add messages to the model prompt.</div>
+        <div class="option">C.Use Amazon Personalize to save conversation</div>
+        <div class="option">D.Use Provisioned Throughput for the LLM.</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">153. An Al practitioner is developing a prompt for an Amazon Titan model. The model is hosted on Amazon Bedrock. The Al practitioner is using the model to solve numerical reasoning challenges. The AI practitioner adds the following phrase to the end of the prompt: "Ask the model to show its work by explaining its reasoning step by step. Which prompt engineering technique is the Al practitioner using?</div>
+      <div class="options">
+        <div class="option">A.Chain - of - thought prompting</div>
+        <div class="option">B.Prompt injection</div>
+        <div class="option">C.Few -</div>
+        <div class="option">D.Prompt templating</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">154. A company is developing an ML model to predict customer churn. Which evaluation metric will assess the model's performance on a binary classification task such as predicting churn?</div>
+      <div class="options">
+        <div class="option">A.F1 score</div>
+        <div class="option">B.Mean squared error (MSE)</div>
+        <div class="option">C.R - squared</div>
+        <div class="option">D.Time used to</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">155. A company's large language model (LLM) is experiencing hallucinations. How can the company decrease hallucinations?</div>
+      <div class="options">
+        <div class="option">A.Set up Agents for Amazon</div>
+        <div class="option">B.Use data pre - processing and remove any data</div>
+        <div class="option">C.Decrease the temperature inference parameter for the</div>
+        <div class="option">D.Use a foundation model (FM) that is trained to not hallucinate.</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">156. A medical company wants to develop an AI application that can access structured patient records, extract relevant information, and generate concise summaries. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Use Amazon Comprehend Medical to extract relevant</div>
+        <div class="option">B.Use Amazon Personalize to analyze patient engagement patterns. Integrate</div>
+        <div class="option">C.Use Amazon Textract to</div>
+        <div class="option">D.Implement Amazon Kendra to provide a searchable index for medical</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">157. A hospital is developing an Al system to assist doctors in diagnosing diseases based on patient records and medical images. To comply with regulations, the sensitive patient data must not leave the country the data is located in. Which data governance strategy will ensure compliance and protect patient privacy?</div>
+      <div class="options">
+        <div class="option">A.Data residency</div>
+        <div class="option">B.Data quality</div>
+        <div class="option">C.Data discoverability</div>
+        <div class="option">D.Data enrichment</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">158. A company is building a chatbot by using generative Al. The company wants to ensure that the chatbot is inclusive. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Use unbiased training data</div>
+        <div class="option">B.Use Amazon Fraud Detector.</div>
+        <div class="option">C.Use prompt templates to set up the</div>
+        <div class="option">D.Set up agents and use Retrieval Augmented Generation (RAG).</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">159. A company wants to deploy a generative Al application to help employees create images from text inputs. Which type of generative AI model meets this requirement?</div>
+      <div class="options">
+        <div class="option">A.Transformer - based model</div>
+        <div class="option">B.Multi - class classification model</div>
+        <div class="option">C.Regression model</div>
+        <div class="option">D.Diffusion model</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">160. A research company wants to develop a text summarization application that can ingest multiple research papers and summarize the research papers. The company wants to use an Amazon Bedrock foundation model (FM). The company wants to summarize the research papers in a single model call. The FM must be able to accept large inputs in a single prompt. Which model factor should the company consider before selecting an FM for this task?</div>
+      <div class="options">
+        <div class="option">A.Vocabulary size</div>
+        <div class="option">B.Model complexity</div>
+        <div class="option">C.Model latency</div>
+        <div class="option">D.Context window</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">161. A financial institution is using Amazon Bedrock to develop an AI application. The application is hosted in a VP</div>
+      <div class="options">
+        <div class="option">C. To meet regulatory compliance standards, the VPC is</div>
+        <div class="option">A.AWS Privatelink</div>
+        <div class="option">B.Amazon Macie</div>
+        <div class="option">C.Amazon CloudFront</div>
+        <div class="option">D.Internet gateway</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">162. A company wants to use Amazon Bedrock to build a generative Al application for product advertising. The company wants to customize a foundation model (FM) by using unlabeled data to make the model more specialized. Which model customization technique meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Fine - tuning</div>
+        <div class="option">B.Retrieval Augmented Generation (RAG)</div>
+        <div class="option">C.Continued pre - training</div>
+        <div class="option">D.Prompt engineering</div>
+        <div class="option">A.Use Amazon Comprehend notebooks to process data.</div>
+        <div class="option">B.Use</div>
+        <div class="option">C.Use Amazon Fraud Detector for</div>
+        <div class="option">D.Use Amazon Q Developer for built - in security scans. E.Use</div>
+      </div>
+      <div class="answer">答案:B D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">164. A company is building a solution to predict risk by using generative Al. The company needs to understand and trust the automated solution before replacing previous manual processes. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Model monitoring</div>
+        <div class="option">B.Model training <highlight color="rgb(124,200,104)"></div>
+        <div class="option">C.Model explainability</highlight></div>
+        <div class="option">D.Model <highlight</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">165. Which type of neural network offers the ability to process text sequences with <highlight color="rgb(124,200,104)">parallel computation?</highlight></div>
+      <div class="options">
+        <div class="option">A.Transformer neural network</div>
+        <div class="option">B.Recurrent</div>
+        <div class="option">C.Convolutional neural network (CNN)</div>
+        <div class="option">D.Long short - term memory</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">166. A global company has built a generative Al application by using Amazon Bedrock foundation models (FMs). The company's highest priority is cloud security. According to the AWS shared responsibility model, which option is the customer's responsibility?</div>
+      <div class="options">
+        <div class="option">A.Access permissions and data encryption</div>
+        <div class="option">B.Physical</div>
+        <div class="option">C.Host operating system and virtualization</div>
+        <div class="option">D.Security</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">167. A company is using a generative AI model that creates images based on multiple text prompts and image examples that users provide. The company wants the AI - generated images to closely match the image examples that users provide. Which prompt engineering technique meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Zero - shot</div>
+        <div class="option">B.Few - shot prompting</div>
+        <div class="option">C.One - shot prompting</div>
+        <div class="option">D.Tree - of - thought prompting</div>
+      </div>
+      <div class="answer">答案:</div>
+    </div>
+    <div class="question">
+      <div class="question-number">170. A retail company is tagging its product inventory. A tag is automatically assigned to each product based on the product desoription. The company created one product category by using a large language model （ LLM ） on Amazon Bedrock in few - shot learning mod The company collected a labeled dataset and wants to <highlight color="rgb(124,200,104)">scale the solution to all product categories. Which solution meets these</highlight> requirements?</div>
+      <div class="options">
+        <div class="option">A.Use prompt engineering with</div>
+        <div class="option">B.Use prompt engineering with prompt templates.</div>
+        <div class="option">C.Customize the</div>
+        <div class="option">D.Customize the model with fine - tuning.</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">171. A media company wants to analyze viewer behavior and demographics to recommend personalized content. The company wants to deploy a customized ML model in its production environment. The company also wants to observe if the model quality drifts. Which AWS service or feature meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon Rekognition</div>
+        <div class="option">B.Amazon</div>
+        <div class="option">C.Amazon Comprehend</div>
+        <div class="option">D.Amazon SageMaker Model Monitor</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">172. An Al practitioner is building an ML model. The AI practitioner wants to provide model transparency and explainability to stakeholders. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Present the model Shapley values.</div>
+        <div class="option">B.Provide the model accuracy</div>
+        <div class="option">C.Provide the model confusion matrix.</div>
+        <div class="option">D.Provide a secure model inference</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">173. A financial company is using ML to help with some of the company's tasks. Which option is a use of generative AI models?</div>
+      <div class="options">
+        <div class="option">A.Summarizing customer complaints</div>
+        <div class="option">B.Classifying customers based on product usage</div>
+        <div class="option">C.Segmenting customers based on type of</div>
+        <div class="option">D.Forecasting revenue for certain products</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">174. An AI practitioner who has minimal ML knowledge wants to predict employee attrition without writing code. Which Amazon SageMaker feature meets this requirement?</div>
+      <div class="options">
+        <div class="option">A.SageMaker Canvas</div>
+        <div class="option">B.SageMaker Clarify</div>
+        <div class="option">C.SageMaker Model Monitor</div>
+        <div class="option">D.SageMaker Data Wrangler</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">175. Which option is a characteristic of transformer - based language models?</div>
+      <div class="options">
+        <div class="option">A.Transformer - based language</div>
+        <div class="option">B.Transformer - based language models can process only text</div>
+        <div class="option">C.Transformer - based language models use self - attention mechanisms to capture</div>
+        <div class="option">D.Transformer - based language models process data sequences one element at a</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">176. A trading company wants to use a large language model （ LLM ） for financial <highlight color="rgb(124,200,104)">market forecasts based on daily market data, news, and Comment company reports.</highlight> Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Fine - tune the LLM on a domain - specific dataset until the LLM</div>
+        <div class="option">B.Pick a general purpose LLM without modifications.</div>
+        <div class="option">C.Pick a</div>
+        <div class="option">D.Continually pre -</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">177. A company has developed custom computer vision models. The company needs a user - friendly Interface for data labeling to minimize model mistakes on new real - world data. Which AWS service, feature, or tool meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon SageMaker Ground Truth</div>
+        <div class="option">B.Amazon SageMaker Canvas</div>
+        <div class="option">C.Amazon Bedrock playgound</div>
+        <div class="option">D.Amazon Bedrock Agents</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">178. A company wants to build and deploy ML models on AWS without writing any code. Which AWS service or feature meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon SageMaker Canvas</div>
+        <div class="option">B.Amazon Rekognition</div>
+        <div class="option">C.AWS DeepRacer</div>
+        <div class="option">D.Amazon Comprehend</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">179. Which component of Amazon Bedrock Studio can help secure the content that Al systems generate?</div>
+      <div class="options">
+        <div class="option">A.Access controls</div>
+        <div class="option">B.Function calling</div>
+        <div class="option">C.Guardrails</div>
+        <div class="option">D.Knowledge bases</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">180. A company wants to improve the accuracy of the responses from a generative Al application. The application uses a <highlight color="rgb(124,200,104)">foundation model</highlight> （ FM ） on Amazon Bedrock. Which solution meets these requirements MOST cost - effectively?</div>
+      <div class="options">
+        <div class="option">A.Fine - tune the FM.</div>
+        <div class="option">B.Retrain the FM.</div>
+        <div class="option">C.Train a new FM.</div>
+        <div class="option">D.Use prompt engineering.</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">181. A retail company wants to build an ML model to recommend products to customers. The company wants to build the model based on responsible practices. Which practice should the company apply when collecting data to decrease model bias?</div>
+      <div class="options">
+        <div class="option">A.Use data from only customers who match the demographics of the</div>
+        <div class="option">B.Collect data from customers who have a past purchase</div>
+        <div class="option">C.Ensure that the data is balanced and collected from a diverse group.</div>
+        <div class="option">D.Ensure</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">182. An AI practitioner wants to deploy a chatbot that can assist customer service representatives by answering questions. The chatbot uses a large language model （ LLM ）。 The chatbot needs to produce fine - grained responses based on evolving product documentation. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Apply continuous pre - training with product documentation to</div>
+        <div class="option">B.Use product documentation with Retrieval Augmented Generation （</div>
+        <div class="option">C.Use transfer learning to train a generalized odel</div>
+        <div class="option">D.Collaborate with research institutions to develop a new <highlight</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">183. A financial company is using AI systems to obtain customer credit scores as part of the loan application process. The company wants to expand to a new market in a <highlight color="rgb(124,200,104)">different geographic area. The company must ensure that it can operate in that</highlight>  <highlight color="rgb(124,200,104)">geographic area. Which compliance laws should the company review?</highlight></div>
+      <div class="options">
+        <div class="option">A.Local health data protection laws</div>
+        <div class="option">B.Local payment card data protection laws</div>
+        <div class="option">C.Local</div>
+        <div class="option">D.Local algorithm accountability laws</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">184. Which option describes embeddings in the context of AI?</div>
+      <div class="options">
+        <div class="option">A.A method for compressing large datasets</div>
+        <div class="option">B.An encryption method for securing sensitive data</div>
+        <div class="option">C.A method for visualizing high -</div>
+        <div class="option">D.A numerical method for data representatin in a reduced dimensionality</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">185. Which option is a characteristic of transformer - based language models?</div>
+      <div class="options">
+        <div class="option">A.Transformer - based language models use convolutional layers to apply filters</div>
+        <div class="option">B.Transformer - based</div>
+        <div class="option">C.Transformer - based language models use</div>
+        <div class="option">D.Transformer - based</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">186. In which stage of the generative AI model lifecycle are tests performed to examine the model's accuracy?</div>
+      <div class="options">
+        <div class="option">A.Deployment</div>
+        <div class="option">B.Data selection</div>
+        <div class="option">C.Fine - tuning</div>
+        <div class="option">D.Evaluation</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">187. What does an AI practitioner do during the deployment phase of a generative AI model lifecycle?</div>
+      <div class="options">
+        <div class="option">A.Chooses the most useful and varied data to train the</div>
+        <div class="option">B.Sets up and optimizes AWS Infrastructure for the live production environment</div>
+        <div class="option">C.Makes the model available in a live environment for end users to access</div>
+        <div class="option">D.Continuously</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">188. Which strategy will prevent model hallucinations?</div>
+      <div class="options">
+        <div class="option">A.Fact - check the output of the large language model （ LLM ）。</div>
+        <div class="option">B.Compare the output of the large language model （ LLM ） to the results of an internet</div>
+        <div class="option">C.Use contextual grounding.</div>
+        <div class="option">D.Use relevance grounding.</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">189. A company Is building a mobile app for users who have a visual impairment. The app must be able to hear what users say and provideComment voice responses. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Use a deep learning neural network to perform speech recognition.</div>
+        <div class="option">B.Build ML models to search for patterns in numeric data.</div>
+        <div class="option">C.Use generative AI</div>
+        <div class="option">D.Build custom models for image</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">190. A company Is working on a large language model （ LLM ） and noticed that the LLM's outputs are not as diverse as expected. Which parameter should the company adjust?</div>
+      <div class="options">
+        <div class="option">A.Temperature</div>
+        <div class="option">B.Batch size</div>
+        <div class="option">C.Learning rate</div>
+        <div class="option">D.Optimizer type</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">191. A company uses Amazon Bedrock for its generative AI application. The company wants to use Amazon Bedrock Guardrails to detect andfilter harmful user <highlight color="rgb(124,200,104)">inputs and model</highlight> - generated outputs. Which content categorles can tie guardrails filter? （ Select TWO. ）</div>
+      <div class="options">
+        <div class="option">A.Hate</div>
+        <div class="option">B.Politics</div>
+        <div class="option">C.Violence</div>
+        <div class="option">D.Gambling</div>
+      </div>
+      <div class="answer">答案: 第一个空（ Context windows ） 第二个空（</div>
+    </div>
+    <div class="question">
+      <div class="question-number">193. Which AWS service or feature stores embeddings in a vector database for use with foundation models （ FMS ） and Retrieval Augmented Generation （ RAG ） ?</div>
+      <div class="options">
+        <div class="option">A.Amazon SageMaker Ground Truth Elag for Review</div>
+        <div class="option">B.Amazon OpenSearch Service</div>
+        <div class="option">C.Amazon Transcribe</div>
+        <div class="option">D.Amazon Textract</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">194. A company stores millions of PDF documents in an Amazon S3 bucket. The company needs to extract the text from the PDFs, generate summaries of the text, and index the summaries for fast searching. Which combination of AWS services will meet these requirements? （ Select TWO. ）</div>
+      <div class="options">
+        <div class="option">A.Amazon</div>
+        <div class="option">B.Amazon Bedrock</div>
+        <div class="option">C.Amazon Transcribe</div>
+        <div class="option">D.Amazon Polly E.Amazon Textract</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">195. A food service company wants to collect a dataset to predict customer food preferences: The company wants to ensure that the food preferences of all demographics are included in the data. Which dataset characteristic does this scenario present?</div>
+      <div class="options">
+        <div class="option">A.Accuracy</div>
+        <div class="option">B.Diversity</div>
+        <div class="option">C.Recency bias</div>
+        <div class="option">D.Reliability</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">196. Which scenario describes a potential risk and limitation of prompt engineering in the context of a generative AI model?</div>
+      <div class="options">
+        <div class="option">A.Prompt engineering does not ensure that the model always produces consistent</div>
+        <div class="option">B.Prompt engineering</div>
+        <div class="option">C.Properly</div>
+        <div class="option">D.Prompt engineering does not ensure that the model will consistently generate</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">197. A company is creating an agent for its application by using Amazon Bedrock Agents. The agent is performing well, but the company wants to improve the agent's <highlight color="rgb(124,200,104)">accuracy by providing some specific examples. Which solution meets these</highlight> requirements?</div>
+      <div class="options">
+        <div class="option">A.Modify the advanced prompts</div>
+        <div class="option">B.Create a guardrail for the agent that includes</div>
+        <div class="option">C.Use Amazon SageMaker Ground Truth to label the examples.</div>
+        <div class="option">D.Run a script</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">198. A bank Is building a chatbot to answer customer questions about opening a bank account. The chatbot will use public bank documents to generate responses. The company will use Amazon Bedrock and prompt engineering to improve the chatbot's responses. Which prompt engineering technique meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Complexity - based prompting</div>
+        <div class="option">B.Zero -</div>
+        <div class="option">C.Few - shot prompting</div>
+        <div class="option">D.Directional stimulus prompting</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">199. What is continued pre - training?</div>
+      <div class="options">
+        <div class="option">A.The process of fine - tuning a pre - trained language model</div>
+        <div class="option">B.The process of providing unlabeled data to a pre -</div>
+        <div class="option">C.The process of training</div>
+        <div class="option">D.The process of evaluating</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">200. What is the purpose of chunking in Retrieval Augmented Generation （ RAG ） ?</div>
+      <div class="options">
+        <div class="option">A.To avoid database storage limitations for large text documents by storing parts</div>
+        <div class="option">B.To improve efficiency by avoiding the need to convert large text</div>
+        <div class="option">C.To improve the contextual relevancy of results retrieved from</div>
+        <div class="option">D.To decrease the cost of storage by storing parts or chunks of the</div>
+      </div>
+      <div class="answer">答案:C</div>
+    </div>
+    <div class="question">
+      <div class="question-number">201. An ecommerce company wants to improve search engine recommendations by customizing the results for each user of the company's ecommerce platform. Which AWS service meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Amazon Personalize</div>
+        <div class="option">B.Amazon Kendra</div>
+        <div class="option">C.Amazon</div>
+        <div class="option">D.Amazon Transcribe</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">202. An ecommerce company is using a chatbot to automate the customer order submission process. The chatbot Is powered by AI and is available to customers directly from the company's website 24 hours a day ， 7 days a week. Which option Is an AI system Input vulnerability that the company needs to resolve before the chatbot is made available?</div>
+      <div class="options">
+        <div class="option">A.Data leakage</div>
+        <div class="option">B.Prompt Injection</div>
+        <div class="option">C.Large language</div>
+        <div class="option">D.Concept drift</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">203. An AI practitioner is training an ML model on a large dataset of financial market data to predict stock prices. The model is overfitting and generating incorrect pedicles. Which parameter should the AI practitioner adjust to improve prediction accuracy?</div>
+      <div class="options">
+        <div class="option">A.Weights and blases</div>
+        <div class="option">B.Learning rate</div>
+        <div class="option">C.Activation function</div>
+        <div class="option">D.Pooling size</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">204. A large retailer receives thousands of customer support inquires about <highlight color="rgb(124,200,104)">products every day. The customer support inquires need to De processed quickly.</highlight> The company wants to implement Agents for Amazon Bedrock. What are the key <highlight color="rgb(124,200,104)">benefits of using Amazon Bedrock agents that could help this retailer?</highlight></div>
+      <div class="options">
+        <div class="option">A.Generation of custom foundation models （ FMs</div>
+        <div class="option">B.Automation of repetitive tasks and orchestration of</div>
+        <div class="option">C.Automatically calling multiple foundation models （ FMs ） and</div>
+        <div class="option">D.Selecting the foundation model （ FM ） based on predefined</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">205. A hospital developed an AI system to provide personalized treatment recommendations for patients. The AI system must provide the rationale behind the recommendations and make the insights accessible to doctors and patients. Which human - centered design principle does this scenario present?</div>
+      <div class="options">
+        <div class="option">A.Explainability</div>
+        <div class="option">B.Privacy</div>
+        <div class="option">C.Fairness</div>
+        <div class="option">D.Data governance</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">206. A food service company wants to collect a dataset to predict customer food preferences. The company wants to ensure that the food preferences of all demographics are Included In the data. Which dataset characteristic does this scenario present?</div>
+      <div class="options">
+        <div class="option">A.Accuracy</div>
+        <div class="option">B.Diversity</div>
+        <div class="option">C.Recency bias</div>
+        <div class="option">D.Reliability</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">207. A company wants to enhance response quality for a large language model （ LLM ） for complex problem - solving tasks. The tasks require detailed reasoning and a step - by - step explanation process. Which prompt engineering technique meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Few - shot prompting</div>
+        <div class="option">B.Zero - shot prompting</div>
+        <div class="option">C.Directional</div>
+        <div class="option">D.Chain - of - thought prompting</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">208. A company makes electronic record software. Users sometimes enter incomplete sentences in the records. The company wants to use ML to automatically complete the sentences. Which solution meets these requirements?</div>
+      <div class="options">
+        <div class="option">A.Use a large language model （ LLM ） trained on data from the records.</div>
+        <div class="option">B.Use a computer vision model trained on images and related metadata.</div>
+        <div class="option">C.Use a k -</div>
+        <div class="option">D.Use reinforcement</div>
+      </div>
+      <div class="answer">答案:A</div>
+    </div>
+    <div class="question">
+      <div class="question-number">209. Which type of AI model makes numeric predictions?</div>
+      <div class="options">
+        <div class="option">A.Diffusion</div>
+        <div class="option">B.Regression</div>
+        <div class="option">C.Transformer</div>
+        <div class="option">D.Multi - modal</div>
+      </div>
+      <div class="answer">答案:B</div>
+    </div>
+    <div class="question">
+      <div class="question-number">210. A company needs to automate the discovery of sensitive data in an Amazon S3 bucket. Which solution will meet this requirement?</div>
+      <div class="options">
+        <div class="option">A.Configure S3 Object Lambda for the S3</div>
+        <div class="option">B.Configure server - side encryption with AWS KMS keys （ SSE - KMS ） for the S3</div>
+        <div class="option">C.Configure Amazon CloudWatch arms for the S3 bucket.</div>
+        <div class="option">D.Configure Amazon Macie</div>
+      </div>
+      <div class="answer">答案:D</div>
+    </div>
+    <div class="question">
+      <div class="question-number">211. A company deployed a model to production. After 4 months, the model <highlight color="rgb(124,200,104)">inference</highlight> quality degraded. The company wants to receive a notification if the model <highlight color="rgb(124,200,104)">inference</highlight> quality degrades. The company also wants to ensure that the problem does not happen again. Which solution will meet these requirements?</div>
+      <div class="options">
+        <div class="option">A.Retrain the model.Monltor model drift by using</div>
+        <div class="option">B.Retrain the model.Monitor model drift by using Amazon</div>
+        <div class="option">C.Build a new model.Monitor model drift by using Amazon</div>
+        <div class="option">D.Build a new model.Monitor model drift by using Amazon</div>
+        <div class="option">A. Amazon CloudWatch</div>
+        <div class="option">B. AWS CloudTrail</div>
+        <div class="option">C. AWS Trusted Advisor</div>
+        <div class="option">D. AWS Config Correct Answer: A 214. Which AWS</div>
+        <div class="option">A. Amazon Q Developer</div>
+        <div class="option">B. Amazon Bedrock</div>
+        <div class="option">C. Amazon Kendra</div>
+        <div class="option">D. Amazon</div>
+        <div class="option">A. Number of customer inquiries handled</div>
+        <div class="option">B. Cost of training AI models</div>
+        <div class="option">C.</div>
+        <div class="option">D. Average handled time (AHT) Correct Answer: C 217.</div>
+        <div class="option">A.</div>
+        <div class="option">B. K-means</div>
+        <div class="option">C. Decision tree</div>
+        <div class="option">D. Support vector machine Correct</div>
+        <div class="option">A. Amazon</div>
+        <div class="option">B. Amazon Transcribe</div>
+        <div class="option">C. Amazon Bedrock</div>
+        <div class="option">D. Amazon Textract Correct Answer: C 219. A</div>
+        <div class="option">A. Configure Amazon Macie to detect sensitive information in the</div>
+        <div class="option">B. Use Amazon SageMaker endpoints to deploy a</div>
+        <div class="option">C. Develop multiple regex patterns</div>
+        <div class="option">D.</div>
+        <div class="option">A. AWS</div>
+        <div class="option">B. AWS Config</div>
+        <div class="option">C. Amazon Inspector</div>
+        <div class="option">D. Amazon CloudWatch E. AWS CloudTrail</div>
+        <div class="option">A. Use Amazon Rekognition moderation.</div>
+        <div class="option">B. Use Amazon Comprehend toxicity</div>
+        <div class="option">C. Use Amazon SageMaker built-in algorithms to train the model.</div>
+        <div class="option">D. Use Amazon</div>
+        <div class="option">A. Amazon SageMaker Model Cards</div>
+        <div class="option">B. Amazon Rekognition</div>
+        <div class="option">C. Amazon Comprehend</div>
+        <div class="option">D. Amazon Lex Correct Answer: A 224. A manufacturing company wants to create product</div>
+        <div class="option">A. Amazon</div>
+        <div class="option">B. Amazon Transcribe</div>
+        <div class="option">C. Amazon Kendra</div>
+        <div class="option">D. Amazon Polly Correct Answer: A</div>
+      </div>
+      <div class="answer">答案: 第一个空 :SageMaker Canvas 第二个空</div>
+    </div>
+  </div>
+</body>
+</html>

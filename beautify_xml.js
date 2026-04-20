@@ -75,6 +75,9 @@ function parseQuestionsFromXML(xmlContent) {
         // 问题的其他行
         if (question && options.length === 0 && !answer) {
           question += ' ' + line;
+        } else if (options.length > 0 && !answer) {
+          // 选项的其他行
+          options[options.length - 1] += ' ' + line;
         }
       }
     }

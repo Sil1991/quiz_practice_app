@@ -194,7 +194,7 @@ function generateQuiz(questions, num = 10, shuffleAnswers = false) {
         // 记录原始正确答案的内容
         let correctContent = null;
         if (question.answer) {
-          const correctLetter = question.answer.match(/答案:([A-Z,]+)/);
+          const correctLetter = question.answer.match(/答案\s*:\s*([A-Z,]+)/);
           if (correctLetter) {
             const letters = correctLetter[1].split(',').map(l => l.trim());
             if (letters.length === 1) {
